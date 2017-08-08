@@ -1,0 +1,48 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder. 
+// Just copy a variable from /sass/bootstrap/_variables.scss, paste it here and edit the value.
+// As example you find one of the most important Bootstrap variable below: $brand-primary.
+// Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
+// Just add your color code here, compile the theme.scss file to change this color everywhere
+
+
+// Start with assigning color names to specific hex values.
+$white:  #FFFFFF;
+$black:  #25282A;
+$red:    #CF0000;
+$orange: #FF5027;
+$yellow: #FFC227;
+$green:  #BED931;
+$blue:   #2BAAE1;
+$teal:   #0473A3;
+$pink:   #ff5b77 !default;
+$purple: #613d7c !default;
+
+// Create grayscale
+$gray-dark:                 #212121;
+$gray:                      #434C50;
+$gray-light:                #69777D;
+$gray-lighter:              #96A1A6;
+$gray-lightest:             #C3CACD;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-rounded:            true !default;
+$enable-shadows:            false !default;
+$enable-gradients:          false !default;
+$enable-transitions:        true !default;
+$enable-hover-media-query:  false !default;
+$enable-grid-classes:       true !default;
+$enable-print-styles:       true !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+
+$body-bg:       $white;
+$body-color:    $gray-dark;
+/*$inverse-bg:    $gray-dark !default;
+$inverse-color: $gray-lighter !default;*/

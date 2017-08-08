@@ -1,0 +1,94 @@
+.site-bar {
+  color: $white;
+  background: $gray-dark;
+  height: 40px;
+  line-height: 40px;
+  z-index: 20;
+}
+
+.site-bar .menu-container {
+  display: inline-block;
+}
+
+#header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.vertical-spacer {
+  margin: 0 5px;
+  line-height: 35px;
+}
+
+.site-bar h1 {
+  font-size: 20px;
+  display: inline-block;
+}
+
+#footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.site-bar .primary-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.site-bar .nav-link {
+  display: block;
+  padding: 0;
+}
+
+.site-bar .float-left .nav-link {
+  margin-right: 25px;
+}
+
+.site-bar .float-right .nav-link {
+  margin-left: 25px;
+}
+
+.site-bar a {
+  color: $white;
+}
+
+.site-bar a:hover {
+  color: $brand-primary;
+}
+
+.social-menu .nav-link {
+  display: block;
+  padding: 0 5px;
+  font-size: 20px;
+}
+
+.footer-menu .nav-link{
+  padding: 0 14px;
+}
+
+.footer-menu .nav-link:first-child{
+  padding-left: 0;
+}
+
+.site-location-text {
+  padding: 0 14px;
+  border-right: 2px solid rgba(255, 255, 255, 0.32);
+  white-space: nowrap;
+}
+
+@media (max-width: 484px) {
+  .site-location-text {
+    white-space: nowrap;
+    display: block;
+    border-right: 0;
+  }
+}
+
+.site-location-text:last-child {
+  padding-right: 0;
+  border-right: 0;
+}

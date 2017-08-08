@@ -1,0 +1,8 @@
+52.90.79.173
+swarmevents.bitnamiapp.com
+user
+?7kF135ad@R@
+
+bitnami
+
+/home/bitnami/apps/wordpress/htdocs/wp-content/themes/understrap

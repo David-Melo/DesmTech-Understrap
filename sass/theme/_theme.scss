@@ -1,0 +1,429 @@
+@import "site-bars";
+
+body {
+  padding: 40px 0;
+  background: transparent;
+}
+
+section {
+  position: relative;
+}
+
+.body-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.site {
+  z-index: 2;
+}
+
+.background-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.event-headline {
+  text-transform: capitalize;
+}
+
+.social-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.site > #page-wrapper > section {
+  padding: 60px 0;
+}
+
+.site section p {
+  font-size: 22px;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+}
+
+.add-bottom {
+  margin-bottom: 30px;
+}
+
+.site #page-wrapper > section:nth-child(even) {
+
+}
+.site #page-wrapper > section:nth-child(odd) {
+
+}
+
+.panel-title {
+  font-size: 21px;
+}
+
+.nav-section-wrapper {
+  position: fixed;
+  top: 40px;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.24);
+  background: #FFF;
+}
+
+.nav-section {
+  padding: 27px;
+}
+
+.logo-wrapper {
+  left:0;
+  top: 0;
+}
+
+#primary-menu {
+  padding: 20px 0;
+}
+
+.ticket-cta-wrapper {
+  /*position: absolute;*/
+  right:0;
+  top: 0;
+  padding: 23px 20px;
+}
+
+.logo-wrapper img {
+  height: 60px;
+}
+
+.logo-wrapper a {
+  margin: 0;
+  padding: 20px 0 ;
+  display: block;
+}
+
+.carousel-fade .carousel-item {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  transition: opacity .75s ease-in-out;
+}
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+
+.wrapper {
+   padding: 0 !important;
+}
+
+.nav-section .nav-link {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 19px;
+  color: $gray-dark;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -200px;
+  visibility: hidden;
+}
+
+.header-section {
+  margin-top: 100px;
+  height: 0;
+  padding: 0 !important;
+}
+
+.highlight-image {
+  display: inline-block;
+}
+
+.highlight-wrapper {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.carousel-item {
+  background-position: center;
+  background-size: cover;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
+
+.section-headings {
+  margin-bottom: 25px;
+}
+
+.section-headings h2 {
+  margin-bottom: 10px;
+}
+
+.slider-section .content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex!important;
+  align-items: center!important;
+  z-index: 2;
+}
+
+#wrapper-footer section {
+  padding: 60px 0;
+}
+
+#wrapper-footer .social-section {
+  padding-top: 0 !important;
+}
+
+.social-section a {
+  font-size: 20px;
+}
+
+.social-menu-section {
+  display: inline-block;
+}
+
+.logo-wrapper {
+  z-index: 5;
+}
+
+#content {
+  padding: 40px 0;
+}
+
+.image-section .alt-container {
+  display: none;
+}
+
+.image-section img {
+  min-width: 100%;
+}
+
+.interior-title {
+  font-size: 30px;
+  line-height: 50px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+
+  body {
+    padding: 20px 0 0;
+  }
+
+  .slider-section {
+    display: none;
+  }
+
+  .header-section {
+    padding: 0;
+    margin-top: 178px;
+  }
+
+  .site > #page-wrapper > section {
+    padding: 15px 0;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  #footer-bar {
+    position: relative;
+    height: auto;
+  }
+
+  #wrapper-footer section {
+    padding: 20px 0;
+  }
+
+  nav {
+    position: fixed !important;
+    top: 140px;
+    left: 0;
+    right: 0;
+    z-index: 16;
+  }
+
+  .logo-wrapper {
+    right: 0;
+    text-align: center;
+    display: block;
+  }
+
+  #content {
+    padding: 40px 25px;
+  }
+
+  .navbar-collapse {
+    max-height: 50vh;
+    overflow: scroll;
+  }
+
+  .mobile-number-cta {
+    line-height: 40px;
+    font-weight: 900;
+    text-align: right;
+    font-size: 25px;
+  }
+
+  .mobile-number-cta a {
+    color: #FFF;
+  }
+
+}
+
+@media (min-width: 500px) and (max-width: 768px){
+  .nav-section-wrapper {
+    top: 34px;
+  }
+  .text-xs-center {
+    text-align: center;
+  }
+  .site-bar {
+    height: 34px;
+    line-height: 24px;
+    padding: 5px 5px;
+  }
+  .text-sm-left{
+    display: inline-block;
+    float: left;
+  }
+  .text-sm-right {
+    display: inline-block;
+    float: right;
+  }
+  nav {
+    top: 134px;
+  }
+  .header-section {
+    margin-top: 152px;
+  }
+}
+
+@media (max-width: 500px){
+  .text-sm-left,
+  .text-sm-right {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-section .nav-link {
+    font-size: 20px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+  .nav-section .nav-link {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .ticket-cta-wrapper {
+    padding: 14px 10px;
+  }
+  .nav-section-wrapper {
+  }
+  .nav-section {
+    padding: 0px;
+    /*position: absolute;*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.18);*/
+  }
+}
+
+.nav-section.tablet {
+  display: none;
+}
+
+.nav-section.desktop .interior-title {
+  line-height: 80px;
+}
+
+@media (min-width: 769px) and (max-width: 1321px){
+  .header-section {
+    margin-top: 130px;
+  }
+  .nav-section.desktop {
+    display: none;
+  }
+  .nav-section.tablet {
+    display: block;
+    background: #DDD;
+  }
+  .nav-section.tablet .nav-link {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .logo-wrapper img {
+    max-width: initial;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 943px){
+  .nav-section.tablet .nav-link {
+    font-size: 15px;
+  }
+}
+#primary-menu .nav-link {
+  padding: 0 1em;
+  line-height: 60px;
+  color: #FFF;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.right-content-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header-content-section {
+  padding: 15px 0 0!important;
+}
+
+.header-content-section .alt-container {
+  display: none;
+}
+
+@media (max-width: 988px) {
+
+  .right-content {
+    padding: 40px 0;
+  }
+
+}
+
+@media (min-width: 770px) and (max-width: 988px) {
+
+  .right-content {
+    padding: 40px 0;
+  }
+
+  .header-section {
+    margin-top: 70px;
+  }
+
+}
