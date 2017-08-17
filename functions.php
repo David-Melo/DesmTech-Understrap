@@ -104,6 +104,14 @@ if( function_exists('acf_add_options_page') ) {
         'redirect'   	=> false
     ));
 
+    $struc_page = acf_add_options_page(array(
+        'page_title' 	=> 'Structured Data',
+        'menu_title' 	=> 'Structured Data',
+        'menu_slug' 	=> 'structured-data',
+        'parent-slug'   => 'site-general-settings',
+        'redirect'   	=> false
+    ));
+
 }
 
 function my_acf_flexible_content_layout_title( $title, $field, $layout, $i ) {

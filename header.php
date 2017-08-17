@@ -7,7 +7,13 @@
  * @package understrap
  */
 
-$container = get_theme_mod( 'understrap_container_type' );
+
+$nav_container = 'container';
+
+if( get_field('nav_container','option') ) {
+	$nav_container = get_field('nav_container','option');
+}
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -24,82 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<style>
 
-		.nav-section .active .nav-link {
-			text-decoration: underline;
-			color: <?= get_field('site_highlight_color','option') ?> !important;
-		}
-
-		<?php if( get_field('main_nav_background','option') != 'transparent' ): ?>
-
-			 .nav-section-wrapper {
-				 background: <?= get_field('main_nav_background','option') ?> !important;
-			 }
-
-		<?php endif; ?>
-
-		<?php if( get_field('body_overlay','option') != 'transparent' ): ?>
-
-			.body-overlay {
-				background: <?= get_field('body_overlay_color','option') ?>;
-				opacity: <?= get_field('body_overlay_opacity','option') ?>;
-			}
-
-		<?php endif; ?>
-
-		<?php if( get_field('body_overlay_mode','option') == 'gradient' ): ?>
-
-			.body-overlay {
-			  background: -moz-linear-gradient(top,  <?= get_field('body_overlay_color','option') ?> 0%, <?= get_field('body_overlay_color_2','option') ?> 100%); /* FF3.6-15 */
-			  background: -webkit-linear-gradient(top,  <?= get_field('body_overlay_color','option') ?> 0%,<?= get_field('body_overlay_color_2','option') ?> 100%); /* Chrome10-25,Safari5.1-6 */
-			  background: linear-gradient(to bottom,  <?= get_field('body_overlay_color','option') ?> 0%,<?= get_field('body_overlay_color_2','option') ?> 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='<?= get_field('body_overlay_color','option') ?>', endColorstr='<?= get_field('body_overlay_color_2','option') ?>',GradientType=0 ); /* IE6-9 */
-			}
-
-		<?php endif; ?>
-
-		<?php if( get_field('main_nav_background','option') == 'transparent' ): ?>
-
-			  .nav-section-wrapper {
-				  background: <?= get_field('main_nav_background','option') ?> !important;
-				  box-shadow: none !important;
-			  }
-
-		<?php endif; ?>
-
-		<?php if( get_field('site_highlight_color','option') ): ?>
-
-			.panel-heading a,
-			.brand-highlight a{
-				color: <?= get_field('site_highlight_color','option') ?> !important;
-			}
-
-		<?php endif; ?>
-
-		<?php if( get_field('site_bg','option') ): ?>
-
-			html {
-				background-image: url(<?= get_field('site_bg','option') ?>);
-			}
-
-		<?php endif; ?>
-
-		<?php if( get_field('back_ground_image_mode','option') == 'image' ): ?>
-
-			html {
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-attachment: fixed;
-			}
-
-		<?php endif; ?>
-
-		<?php if( get_field('paragraphs_align','option') ): ?>
-
-			p {
-				text-align: <?= get_field('paragraphs_align','option') ?>;
-			}
-
-		<?php endif; ?>
+		<?php include('styles.php'); ?>
 
 	</style>
 
@@ -113,9 +44,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<section id="header-bar" class="site-bar clearfix">
 
-		<div class="">
-
-			<div class="container-fluid">
+		<div class="container-fluid">
 
 				<a class="float-sm-left hidden-xs-down" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?= get_field('site_heading','option') ?></a>
 
@@ -142,15 +71,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			</div>
 
-		</div>
-
 	</section>
 
 	<nav class="navbar navbar-toggleable-md  navbar-inverse bg-inverse hidden-md-up">
 
 		<div class="row">
 
-			<div class="col-xs-auto">
+			<div class="col">
 				<button class="navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -189,7 +116,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="nav-section-wrapper hidden-sm-down">
 
-		<div class="<?php echo esc_attr( $container ); ?> clearfix">
+		<div class="<?= $nav_container ; ?> clearfix">
 
 			<div class="logo-wrapper float-md-left">
 
@@ -201,22 +128,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 				?>
 
 				<a href="/" title="Home">
-					<img src="<?php echo $logo[0]; ?>">
+					<img src="<?php echo $logo[0]; ?>" title="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>" alt="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 				</a>
 
 			</div>
 
 			<div class="nav-section-nav pull-sm-right">
 
-				<?php wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						'container_class' => 'menu-container',
-						'menu_class'      => 'nav justify-content-end',
-						'menu_id'         => 'primary-menu',
-						'walker'          => new WP_Bootstrap_Navwalker(),
-					)
-				); ?>
+				<?php include("menus.php"); ?>
 
 			</div>
 
@@ -227,6 +146,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<section class="nav-section tablet">
 
 			<ul class="nav justify-content-center">
+
+				<?php include("menus.php"); ?>
 
 				<?php if( have_rows('home_page_sections') ): ?>
 				<?php while ( have_rows('home_page_sections') ) : the_row(); ?>
@@ -256,7 +177,7 @@ $container = get_theme_mod( 'understrap_container_type' );
             ?>
 
 			<a href="/" title="Home">
-				<img src="<?php echo $logo[0]; ?>">
+				<img src="<?php echo $logo[0]; ?>" title="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>" alt="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 			</a>
 
 		</div>

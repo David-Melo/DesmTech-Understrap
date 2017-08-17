@@ -130,7 +130,7 @@ h1, h2, h3 {
 a.anchor {
   display: block;
   position: relative;
-  top: -200px;
+  top: -155px;
   visibility: hidden;
 }
 
@@ -363,7 +363,7 @@ section h2 {
 
 @media (min-width: 769px) and (max-width: 1321px){
   .header-section {
-    margin-top: 130px;
+    margin-top: 0px;
   }
   .nav-section.desktop {
     display: none;
@@ -389,7 +389,6 @@ section h2 {
 #primary-menu .nav-link {
   padding: 0 1em;
   line-height: 60px;
-  color: #FFF;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 17px;
@@ -423,7 +422,57 @@ section h2 {
   }
 
   .header-section {
-    margin-top: 70px;
+    margin-top: 0px;
   }
 
+}
+
+#single-wrapper {
+  margin-top: 50px;
+}
+
+.video-section {
+  height: 86vh;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.video-background {
+  background: transparent;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+  .video-background iframe {
+    top: 140px;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+  .video-background iframe {
+    top: 140px;
+  }
+}
+
+.nav-section-nav .active .nav-link {
+  text-decoration: underline;
 }

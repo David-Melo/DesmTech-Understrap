@@ -67,7 +67,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<a class="anchor" id="section-<?php the_sub_field('section_slug'); ?>"></a>
 
 			<div class="content-wrapper">
-				<div class="container">
+				<div class="<?= $page_container ; ?>">
 
 					<?php if ( get_sub_field('section_heading') ) : ?>
 					<h2 class="text-center" style="<?=$headingStyle;?>"><?php the_sub_field('section_heading'); ?></h2>
@@ -211,15 +211,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="float-lg-right d-sm-flex justify-content-sm-center flex-column flex-sm-row flex-md-row">
 
 						<? if ( get_field('phone_number','option') ) : ?>
-						<span class="site-location-text col-sm-4 text-center"><a href="tel:<?= the_field('phone_number','option'); ?>"><?= the_field('phone_number','option'); ?></a></span>
+						<span class="site-location-text col text-center"><a href="tel:<?= the_field('phone_number','option'); ?>"><?= the_field('phone_number','option'); ?></a></span>
 						<? endif; ?>
 
 						<? if ( get_field('address_1','option') ) : ?>
-						<span class="site-location-text col-sm-4 text-center"><?= the_field('address_1','option'); ?></span>
+						<span class="site-location-text col text-center"><?= the_field('address_1','option'); ?></span>
 						<? endif; ?>
 
 						<? if ( get_field('address_2','option') ) : ?>
-						<span class="site-location-text col-sm-4 text-center"><? the_field('address_2','option'); ?></span>
+						<span class="site-location-text col text-center"><? the_field('address_2','option'); ?></span>
 						<? endif; ?>
 
 					</div>
@@ -389,6 +389,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	});
 
 </script>
+
+<?php include("structured_data.php") ;?>
 
 </body>
 

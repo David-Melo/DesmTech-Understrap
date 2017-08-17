@@ -12,10 +12,61 @@
 
 get_header();
 
-$container   = get_theme_mod( 'understrap_container_type' );
-$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+$page_container = 'container';
+
+if( get_field('page_container','option') ) {
+	$page_container = get_field('page_container','option') ;
+}
 
 ?>
+
+<?php if ( !is_mobile() ) : ?>
+<?php if ( the_field('home_page_video','option') ) : ?>
+<div class="video-section">
+
+    <div class="video-background">
+        <div class="video-overlay"></div>
+        <div class="video-foreground">
+            <div id="muteYouTubeVideoPlayer"></div>
+            <script async src="https://www.youtube.com/iframe_api"></script>
+            <script>
+                function onYouTubeIframeAPIReady() {
+                    var player;
+                    player = new YT.Player('muteYouTubeVideoPlayer', {
+                        videoId: '<?= get_field('home_page_video','option') ?>', // YouTube Video ID
+                        playerVars: {
+                            autoplay: 1, // Auto-play the video on load
+                            controls: 0, // Show pause/play buttons in player
+                            showinfo: 0, // Hide the video title
+                            modestbranding: 1, // Hide the Youtube Logo
+                            loop: 1, // Run the video in a loop
+                            fs: 0, // Hide the full screen button
+                            cc_load_policty: 0, // Hide closed captions
+                            iv_load_policy: 3, // Hide the Video Annotations
+                            autohide: 0, // Hide video controls when playing,
+                            rel: 0,
+                            enablejsapi : 1,
+                            playlist: '<?= get_field('home_page_video','option') ?>'
+                        },
+                        events: {
+                            onReady: function(e) {
+                                <? if ( get_field('home_page_video_mute','option') ) : ?>e.target.mute();<?php endif; ?>
+                            },
+                            onStateChange: function(e){
+                                if(e.data===0){
+                                    e.target.play();
+                                }
+                            }
+                        }
+                    });
+                }
+            </script>
+        </div>
+    </div>
+
+</div>
+<?php endif; ?>
+<?php endif; ?>
 
 <div id="page-wrapper">
 
