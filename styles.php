@@ -5,7 +5,9 @@
 header .site-bar {
 background-color: <?= get_field('heading_site_bar','option') ?> !important;
 }
-
+.nav-section.tablet, .bg-inverse {
+background: <?= get_field('heading_site_bar','option') ?> !important;
+}
 <?php endif; ?>
 
 /* -------------------------------------------------------------------------- */
@@ -30,6 +32,9 @@ header .site-bar a:hover {
 color: <?= get_field('heading_site_bar_link','option') ?> !important;
 }
 
+.nav-section.tablet .menu-link{
+color: <?= get_field('heading_site_bar_link','option') ?> !important;
+}
 
 <?php endif; ?>
 
@@ -113,6 +118,14 @@ color: <?= get_field('site_highlight_color','option') ?> !important;
 
 .nav-section-nav .active .nav-link {
     color: <?= get_field('site_highlight_color','option') ?>
+}
+
+.brand-highlight {
+color: <?= get_field('site_highlight_color','option') ?> !important;
+}
+
+.btn-highlight {
+background-color: <?= get_field('site_highlight_color','option') ?> !important;
 }
 
 <?php endif; ?>
@@ -209,7 +222,7 @@ background-attachment: fixed;
 
 <?php if( get_field('paragraphs_align','option') ): ?>
 
-p {
+#page p {
 text-align: <?= get_field('paragraphs_align','option') ?>;
 }
 

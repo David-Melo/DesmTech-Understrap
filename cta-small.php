@@ -1,0 +1,1 @@
+<a target="_blank" href="<? the_field('cta_link','option'); ?>" class="btn btn-warning btn-highlight"><? the_field('cta_text','option'); ?></a>

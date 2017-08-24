@@ -9369,9 +9369,6 @@ h1, h2, h3 {
   left: 0;
   top: 0; }
 
-#primary-menu {
-  padding: 20px 0; }
-
 .ticket-cta-wrapper {
   /*position: absolute;*/
   right: 0;
@@ -9485,7 +9482,7 @@ section h2 {
     display: none; }
   .header-section {
     padding: 0;
-    margin-top: 178px; }
+    margin-top: 176px; }
   .site > #page-wrapper > section {
     padding: 15px 0; }
   p {
@@ -9509,14 +9506,19 @@ section h2 {
     padding: 40px 25px; }
   .navbar-collapse {
     max-height: 50vh;
-    overflow: scroll; }
-  .mobile-number-cta {
-    line-height: 40px;
-    font-weight: 900;
-    text-align: right;
-    font-size: 25px; }
-  .mobile-number-cta a {
-    color: #FFF; } }
+    overflow: auto; } }
+
+#navbarNavDropdown .navbar-nav .nav-link {
+  text-align: center; }
+
+.mobile-number-cta {
+  line-height: 40px;
+  font-weight: 900;
+  text-align: right;
+  font-size: 25px; }
+
+.mobile-number-cta a {
+  color: #FFF; }
 
 @media (min-width: 500px) and (max-width: 768px) {
   .nav-section-wrapper {
@@ -9569,30 +9571,41 @@ section h2 {
 .nav-section.desktop .interior-title {
   line-height: 80px; }
 
-@media (min-width: 769px) and (max-width: 1321px) {
+@media (max-width: 1321px) {
   .header-section {
-    margin-top: 0px; }
+    margin-top: 156px; } }
+
+@media (min-width: 769px) and (max-width: 1321px) {
   .nav-section.desktop {
     display: none; }
   .nav-section.tablet {
     display: block;
     background: #DDD; }
-  .nav-section.tablet .nav-link {
-    font-size: 20px;
-    line-height: 30px; }
   .logo-wrapper img {
-    max-width: initial; } }
+    max-width: initial; }
+  nav {
+    position: fixed !important;
+    top: 140px;
+    left: 0;
+    right: 0;
+    z-index: 16; }
+  .nav-section-nav .primary-menu {
+    display: none; } }
+
+.nav-section-nav .primary-menu {
+  padding: 20px 0; }
+
+.primary-menu .nav-link {
+  padding: 0 1em;
+  line-height: 56px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 17px;
+  white-space: nowrap; }
 
 @media (min-width: 769px) and (max-width: 943px) {
   .nav-section.tablet .nav-link {
     font-size: 15px; } }
-
-#primary-menu .nav-link {
-  padding: 0 1em;
-  line-height: 60px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 17px; }
 
 .right-content-wrapper {
   display: flex;
@@ -9606,13 +9619,19 @@ section h2 {
 
 @media (max-width: 988px) {
   .right-content {
-    padding: 40px 0; } }
+    padding: 40px 0; }
+  a.anchor {
+    top: -190px; }
+  .header-section {
+    margin-top: 100px; } }
+
+@media (max-width: 739px) {
+  .header-section {
+    margin-top: 170px; } }
 
 @media (min-width: 770px) and (max-width: 988px) {
   .right-content {
-    padding: 40px 0; }
-  .header-section {
-    margin-top: 0px; } }
+    padding: 40px 0; } }
 
 #single-wrapper {
   margin-top: 50px; }
@@ -9662,6 +9681,17 @@ section h2 {
 
 .nav-section-nav .active .nav-link {
   text-decoration: underline; }
+
+.nav-section.tablet {
+  top: 140px;
+  z-index: 15;
+  position: fixed;
+  bottom: auto; }
+
+.swarm-footer {
+  background: #000;
+  color: #FFF;
+  padding: 30px; }
 
 /*
 * Use existing Bootstrap 4 classes and

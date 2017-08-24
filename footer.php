@@ -21,167 +21,31 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="wrapper" id="wrapper-footer">
 
-		<?php if( have_rows('footer_sections','option') ): ?>
-		<?php while ( have_rows('footer_sections','option') ) : the_row(); ?>
+		<?php include('content-sections-footer.php'); ?>
 
-		<?php
+		<div class="container-fluid swarm-footer">
 
-            $classes = '';
-            $style = '';
-            $headingStyle = '';
+			<div class="row mb-2">
+				<div class="col-md-4 text-md-left text-sm-center mb-sm-4">
+					<p><strong>SWARM, Inc.</strong> is an event agency located in Wynwood, Miami, Florida. We are focused on the production, marketing, concessions, and all around logistics of your next event.</p>
 
-            $sectionBG = get_sub_field('section_bg');
-            $sectionBGColor= get_sub_field('section_background_color');
-            $sectionTextColor= get_sub_field('section_text_color');
-            $sectionHeadingColor= get_sub_field('section_heading_color');
-
-            if( !empty($sectionBG) ):
-
-                $classes .= ' background-image';
-                $style .= 'background-image: url(' . $sectionBG['url'] . ');';
-
-            endif;
-
-            if( !empty($sectionBGColor) ):
-
-                $style .= 'background-color: ' . $sectionBGColor . ' !important;';
-
-            endif;
-
-            if( !empty($sectionTextColor) ):
-
-                $style .= 'color: ' . $sectionTextColor . ' !important;';
-
-            endif;
-
-            if( !empty($sectionHeadingColor) ):
-
-                $headingStyle .= 'color: ' . $sectionHeadingColor . ' !important;';
-
-            endif;
-
-            ?>
-
-		<section class="<?=$classes;?> <?php echo ( get_row_layout() == 'social_section' ) ? 'social-section' : '' ; ?> <?php echo ( get_row_layout() == 'slider_section' ) ? 'no-padding slider-section text-center' : '' ; ?>" style="<?=$style;?>">
-
-			<a class="anchor" id="section-<?php the_sub_field('section_slug'); ?>"></a>
-
-			<div class="content-wrapper">
-				<div class="<?= $page_container ; ?>">
-
-					<?php if ( get_sub_field('section_heading') ) : ?>
-					<h2 class="text-center" style="<?=$headingStyle;?>"><?php the_sub_field('section_heading'); ?></h2>
-					<?php endif; ?>
-
-					<?php if ( get_sub_field('section_subheading') ) : ?>
-					<h3 class="text-center" style="<?=$headingStyle;?>">c</h3>
-					<?php endif; ?>
-
-					<?php the_sub_field('section_content'); ?>
-
-					<!-- ---------------------- Section Template ---------------------- -->
-					<?php if( get_row_layout() == 'highlights_section' ): ?>
-
-					<?php if( have_rows('event_highlights') ): ?>
-
-					<div class="text-center">
-
-						<div class="highlights-wrapper">
-
-							<?php while ( have_rows('event_highlights') ) : the_row(); ?>
-
-							<div class="highlight-wrapper">
-								<div class="highlight-image">
-									<?php
-
-                                            $image = get_sub_field('image');
-
-                                            if( $image ) {
-
-                                                echo wp_get_attachment_image( $image, 'medium' );
-
-                                            }
-
-                                        ?>
-								</div>
-							</div>
-
-							<?php endwhile; ?>
-
-						</div>
-
-					</div>
-
-					<?php endif; ?>
-
-					<?php endif; ?>
-					<!-- ---------------------- Section Template ---------------------- -->
-
-					<!-- ---------------------- Section Template ---------------------- -->
-					<?php if( get_row_layout() == 'social_section' ): ?>
-
-					<div class="text-center">
-
-						<ul class="social-menu social-menu-section clearfix brand-highlight">
-							<?php if( get_sub_field('facebook_url') ): ?>
-							<li class="menu-item"><a class="nav-link" href="<?php the_sub_field('facebook_url'); ?>" title="Find Us On Facebook" target="_blank"><i class="fa fa-facebook"></i> Like Us On Facebook</a></li>
-							<?php endif; ?>
-							<?php if( get_sub_field('twitter_url') ): ?>
-							<li class="menu-item"><a class="nav-link" href="<?php the_sub_field('twitter_url'); ?>" title="Find Us On Twitter" target="_blank"><i class="fa fa-twitter"></i> Follow Us On Twitter</a></li>
-							<?php endif; ?>
-							<?php if( get_sub_field('instagram_url') ): ?>
-							<li class="menu-item"><a class="nav-link" href="<?php the_sub_field('instagram_url'); ?>" title="Find Us On Instagram" target="_blank"><i class="fa fa-instagram"></i> Find Us On Instagram</a></li>
-							<?php endif; ?>
-							<?php if( get_sub_field('email_address') ): ?>
-							<li class="menu-item"><a class="nav-link" href="mailto:<?php the_sub_field('email_address'); ?>" title="Send Us An Email" target="_blank"><i class="fa fa-envelope"></i> Send Us An Email</a></li>
-							<?php endif; ?>
-						</ul>
-
-					</div>
-
-					<?php endif; ?>
-					<!-- ---------------------- Section Template ---------------------- -->
-
-
+				</div>
+				<div class="col-md-4 text-center mb-sm-4">
+					<img src="/wp-content/uploads/2017/06/logo-white.png" alt="" width="150" />
+					<div style="color: #00ffff;">© 2017 SWARM Event Agency</div>
+					<div style="color: #00ffff;">All rights reserved</div>
+				</div>
+				<div class="col-md-4 text-md-right text-sm-center mb-sm-2">
+					<div><strong>SWARM Event Agency</strong></div>
+					<div><strong>305.461.2700</strong></div>
+					<div><strong>2308 NW 5 Ave</strong></div>
+					<div><strong>Wywnood, FL 33127</strong></div>
 				</div>
 			</div>
 
-			<!-- ---------------------- Section Template ---------------------- -->
-			<?php if( get_row_layout() == 'slider_section' ): ?>
+			<div class="text-center px-5 mx-5">Please contact us for any inquiries, to volunteer, or sponsorship opportunities.</div>
 
-			<?php if ( get_sub_field('slider_height') ) : ?>
-			<style>
-				.carousel-item {
-					height:  <?php the_sub_field('slider_height'); ?>px !important;
-				}
-			</style>
-			<?php endif; ?>
-
-			<div class="slider-wrapper">
-				<div class="carousel slide" data-ride="carousel" data-interval="3000">
-					<div class="carousel-inner" role="listbox">
-
-						<?php $images = get_sub_field('slider_gallery'); ?>
-
-						<?php if( $images ): ?>
-						<?php foreach( $images as $key => $image ): ?>
-						<div class="carousel-item <?php echo ($key == 0) ? 'active' : '' ; ?>" style="background-image: url('<?php echo $image['url']; ?>')">
-							<img class="d-block img-fluid" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" style="visibility: hidden">
-						</div>
-						<?php endforeach; ?>
-						<?php endif; ?>
-
-					</div>
-				</div>
-			</div>
-
-			<?php endif; ?>
-			<!-- ---------------------- Section Template ---------------------- -->
-
-		</section>
-
-		<?php endwhile; ?>
-		<?php endif; ?>
+		</div>
 
 	</div>
 

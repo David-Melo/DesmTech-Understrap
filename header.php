@@ -73,40 +73,31 @@ if( get_field('nav_container','option') ) {
 
 	</section>
 
-	<nav class="navbar navbar-toggleable-md  navbar-inverse bg-inverse hidden-md-up">
+	<nav class="navbar navbar-toggleable-lg navbar-inverse bg-inverse hidden-lg-up">
 
-		<div class="row">
+		<div class="col">
 
-			<div class="col">
-				<button class="navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+			<button class="navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<?php if ( get_field('cta_link','option') ): ?>
+			<div class="nav-section-cta float-left ml-3 hidden-md-up">
+				<?php include("cta-small.php"); ?>
 			</div>
-
-			<div class="col">
-				<div class="mobile-number-cta float-md-right">
-
-					<? if ( get_field('phone_number','option') ) : ?>
-						<i class="fa fa-phone"></i> <span><a href="tel:<?= the_field('phone_number','option'); ?>"><?= the_field('phone_number','option'); ?></a></span>
-					<? endif; ?>
-
-				</div>
-			</div>
+			<?php endif; ?>
 
 		</div>
 
-		<!-- The WordPress Menu goes here -->
-		<?php wp_nav_menu(
-			array(
-				'theme_location'  => 'primary',
-				'container_class' => 'collapse navbar-collapse',
-				'container_id'    => 'navbarNavDropdown',
-				'menu_class'      => 'navbar-nav',
-				'fallback_cb'     => '',
-				'menu_id'         => 'main-menu',
-				'walker'          => new WP_Bootstrap_Navwalker(),
-			)
-		); ?>
+		<div class="col-auto">
+			<div class="mobile-number-cta float-md-right">
+				<? if ( get_field('phone_number','option') ) : ?>
+				<i class="fa fa-phone brand-highlight"></i> <span><a href="tel:<?= the_field('phone_number','option'); ?>"><?= the_field('phone_number','option'); ?></a></span>
+				<? endif; ?>
+			</div>
+		</div>
+
+		<?php include("menus-mobile.php"); ?>
 
 	</nav><!-- .site-navigation -->
 
@@ -118,24 +109,37 @@ if( get_field('nav_container','option') ) {
 
 		<div class="<?= $nav_container ; ?> clearfix">
 
-			<div class="logo-wrapper float-md-left">
+			<div class="nav-items-wrapper">
 
-				<?php
+				<div class="row no-gutters">
 
-					$custom_logo_id = get_theme_mod( 'custom_logo' );
-					$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+					<div class="col-sm d-flex">
 
-				?>
+						<div class="nav-section-logo d-flex align-self-center">
+							<?php include("logo.php"); ?>
+						</div>
 
-				<a href="/" title="Home">
-					<img src="<?php echo $logo[0]; ?>" title="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>" alt="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
-				</a>
+					</div>
 
-			</div>
+					<div class="col-sm-6 hidden-lg-down">
 
-			<div class="nav-section-nav pull-sm-right">
+						<div class="nav-section-nav">
+							<?php include("menus.php"); ?>
+						</div>
 
-				<?php include("menus.php"); ?>
+					</div>
+
+					<div class="col-sm d-flex flex-row-reverse">
+
+						<?php if ( get_field('cta_link','option') ): ?>
+						<div class="nav-section-cta d-flex align-self-center">
+							<?php include("cta.php"); ?>
+						</div>
+						<?php endif; ?>
+
+					</div>
+
+				</div>
 
 			</div>
 
@@ -145,25 +149,9 @@ if( get_field('nav_container','option') ) {
 
 	<section class="nav-section tablet">
 
-			<ul class="nav justify-content-center">
+		<?php include("menus.php"); ?>
 
-				<?php include("menus.php"); ?>
-
-				<?php if( have_rows('home_page_sections') ): ?>
-				<?php while ( have_rows('home_page_sections') ) : the_row(); ?>
-				<?php if ( get_sub_field('section_slug') ) : ?>
-				<li class="nav-item">
-					<a class="nav-link active" href="#section-<?php the_sub_field('section_slug'); ?>">
-						<?php the_sub_field('section_link_title'); ?>
-					</a>
-				</li>
-				<?php endif; ?>
-				<?php endwhile; ?>
-				<?php endif; ?>
-
-			</ul>
-
-		</section>
+	</section>
 
 	<div class="nav-section-wrapper hidden-md-up">
 

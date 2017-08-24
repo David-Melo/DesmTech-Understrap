@@ -2,11 +2,14 @@
 
 <?php if( get_field('main_menu_mode','option') == 'primary' ): ?>
 
+<!-- The WordPress Menu goes here -->
 <?php wp_nav_menu(
     array(
         'theme_location'  => 'primary',
-        'container_class' => 'menu-container',
-        'menu_class'      => 'primary_menu nav justify-content-center',
+        'container_class' => 'collapse navbar-collapse',
+        'container_id'    => 'navbarNavDropdown',
+        'menu_class'      => 'navbar-nav',
+        'fallback_cb'     => '',
         'menu_id'         => '',
         'walker'          => new WP_Bootstrap_Navwalker(),
     )
@@ -18,9 +21,9 @@
 
 <?php if( get_field('main_menu_mode','option') == 'content' ): ?>
 
-<div class="menu-container">
+<div id="navbarNavDropdown" class="collapse navbar-collapse">
 
-    <ul class="nav justify-content-center primary-menu">
+    <ul class="navbar-nav">
 
         <?php if( have_rows('content_sections') ): ?>
         <?php while ( have_rows('content_sections') ) : the_row(); ?>
