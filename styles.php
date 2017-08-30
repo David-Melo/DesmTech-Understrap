@@ -40,8 +40,6 @@ color: <?= get_field('heading_site_bar_link','option') ?> !important;
 
 /* -------------------------------------------------------------------------- */
 
-<?= get_field('heading_site_bar_show','option') ;?>
-
 <?php if( !get_field('heading_site_bar_show','option') ): ?>
 
 header .site-bar {
@@ -54,7 +52,7 @@ header .site-bar {
 
 <?php if( get_field('footer_site_bar','option') != 'transparent' ): ?>
 
-footer .site-bar {
+#footer-bar {
 background-color: <?= get_field('footer_site_bar','option') ?> !important;
 }
 
@@ -126,6 +124,7 @@ color: <?= get_field('site_highlight_color','option') ?> !important;
 
 .btn-highlight {
 background-color: <?= get_field('site_highlight_color','option') ?> !important;
+border-color: <?= get_field('site_highlight_color','option') ?> !important;
 }
 
 <?php endif; ?>
@@ -229,3 +228,15 @@ text-align: <?= get_field('paragraphs_align','option') ?>;
 <?php endif; ?>
 
 /* -------------------------------------------------------------------------- */
+
+<?php if( get_field('section_heading_bg','option') ): ?>
+
+.section-headings h2 span {
+background-color: <?= get_field('section_heading_bg','option') ?>;
+}
+
+<?php endif; ?>
+
+/* -------------------------------------------------------------------------- */
+
+

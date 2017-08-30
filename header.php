@@ -73,7 +73,7 @@ if( get_field('nav_container','option') ) {
 
 	</section>
 
-	<nav class="navbar navbar-toggleable-lg navbar-inverse bg-inverse hidden-lg-up">
+	<nav class="navbar navbar-toggleable-lg navbar-inverse bg-inverse hidden-lg-up clearfix">
 
 		<div class="col">
 
@@ -81,18 +81,21 @@ if( get_field('nav_container','option') ) {
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<?php if ( get_field('cta_link','option') ): ?>
-			<div class="nav-section-cta float-left ml-3 hidden-md-up">
-				<?php include("cta-small.php"); ?>
-			</div>
-			<?php endif; ?>
+
 
 		</div>
 
-		<div class="col-auto">
+		<div class="col-auto clearfix">
+			<?php if ( get_field('cta_link','option') ): ?>
+			<div class="nav-section-cta float-right ml-3 hidden-md-up clearfix">
+				<?php include("cta-small.php"); ?>
+			</div>
+			<?php endif; ?>
 			<div class="mobile-number-cta float-md-right">
+				<? if ( !get_field('hide_phone_cta_mobile','option') ) : ?>
 				<? if ( get_field('phone_number','option') ) : ?>
 				<i class="fa fa-phone brand-highlight"></i> <span><a href="tel:<?= the_field('phone_number','option'); ?>"><?= the_field('phone_number','option'); ?></a></span>
+				<? endif; ?>
 				<? endif; ?>
 			</div>
 		</div>

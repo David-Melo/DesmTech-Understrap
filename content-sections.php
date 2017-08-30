@@ -12,14 +12,14 @@
                     <?php include("content-sections-header.php"); ?>
                     <?php include("content-sections-image.php"); ?>
 
-                    <div class="<?= $page_container ; ?> alt-container">
+                    <div class="<?= $page_container ; ?> alt-container h-100">
 
                         <?php if ( get_sub_field('section_heading') ||  get_sub_field('section_subheading')) : ?>
 
                             <div class="section-headings">
 
                                 <?php if ( get_sub_field('section_heading') ) : ?>
-                                    <h2 class="text-center" style="<?=$headingStyle;?>"><?php the_sub_field('section_heading'); ?></h2>
+                                    <h2 class="text-center" style="<?=$headingStyle;?>"><span><?php the_sub_field('section_heading'); ?></span></h2>
                                 <?php endif; ?>
 
                                 <?php if ( get_sub_field('section_subheading') ) : ?>

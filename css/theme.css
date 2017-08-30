@@ -9693,6 +9693,11 @@ section h2 {
   color: #FFF;
   padding: 30px; }
 
+.section-headings h2 span {
+  background: transparent;
+  padding: 0 15px;
+  padding: 0 15px; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style

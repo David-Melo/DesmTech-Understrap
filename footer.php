@@ -27,11 +27,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="row mb-2">
 				<div class="col-md-4 text-md-left text-sm-center mb-sm-4">
-					<p><strong>SWARM, Inc.</strong> is an event agency located in Wynwood, Miami, Florida. We are focused on the production, marketing, concessions, and all around logistics of your next event.</p>
+					<p><strong>SWARM, Inc.</strong> is an <a href="https://swarminc.com" target="_blank" title="SWARM, Inc.">event agency</a> located in Wynwood, Miami, Florida. We are focused on the production, marketing, concessions, and all around logistics of your next event.</p>
 
 				</div>
 				<div class="col-md-4 text-center mb-sm-4">
-					<img src="/wp-content/uploads/2017/06/logo-white.png" alt="" width="150" />
+					<img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.png" alt="" width="150" />
 					<div style="color: #00ffff;">© 2017 SWARM Event Agency</div>
 					<div style="color: #00ffff;">All rights reserved</div>
 				</div>
@@ -43,7 +43,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 			</div>
 
-			<div class="text-center px-5 mx-5">Please contact us for any inquiries, to volunteer, or sponsorship opportunities.</div>
+			<div class="text-center px-5 mx-5"><small>Please contact us for any inquiries, sponsorships, or volunteer opportunities.</small></div>
 
 		</div>
 
