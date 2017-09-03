@@ -134,7 +134,19 @@ border-color: <?= get_field('site_highlight_color','option') ?> !important;
 <?php if( get_field('main_nav_background','option') != 'transparent' ): ?>
 
 .nav-section-wrapper {
-background: <?= get_field('main_nav_background','option') ?> !important;
+background-color: <?= get_field('main_nav_background','option') ?> !important;
+}
+
+<?php endif; ?>
+
+/* -------------------------------------------------------------------------- */
+
+<?php if( get_field('main_nav_background_image','option') != 'transparent' ): ?>
+
+.nav-section-wrapper {
+background-image: url(<?= get_field('main_nav_background_image','option') ?>) !important;
+background-size: cover;
+background-position: center;
 }
 
 <?php endif; ?>
