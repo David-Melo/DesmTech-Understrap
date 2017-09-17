@@ -251,4 +251,47 @@ background-color: <?= get_field('section_heading_bg','option') ?>;
 
 /* -------------------------------------------------------------------------- */
 
+<?php if( get_field('main_menu_style','option') == 'collapsed' ): ?>
+
+.logo-wrapper a {
+    padding: 0px 0;
+}
+
+.logo-wrapper img {
+    height: 80px;
+}
+
+@media (max-width: 1321px) {
+    .header-section {
+        margin-top: 100px;
+    }
+}
+
+
+<?php endif; ?>
+
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+
+<?php if( get_field('main_menu_button_color','option') == 'collapsed' ): ?>
+
+.menu-container a.side-bar-toggle {
+    color: <?= get_field('main_menu_button_color','option') ?>;
+}
+.menu-container a.side-bar-toggle:hover {
+    color: <?= get_field('site_highlight_color','option') ?>;
+}
+
+.menu-container a.side-bar-toggle  .navbar-toggler-icon{
+    color: <?= get_field('main_menu_button_color','option') ?>;
+}
+.menu-container a.side-bar-toggle:hover .navbar-toggler-icon {
+    color: <?= get_field('site_highlight_color','option') ?>;
+}
+
+<?php endif; ?>
+
+/* -------------------------------------------------------------------------- */
+
 

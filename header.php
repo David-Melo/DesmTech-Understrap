@@ -81,8 +81,6 @@ if( get_field('nav_container','option') ) {
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-
-
 		</div>
 
 		<div class="col-auto clearfix">
@@ -112,49 +110,27 @@ if( get_field('nav_container','option') ) {
 
 		<div class="<?= $nav_container ; ?> clearfix">
 
-			<div class="nav-items-wrapper">
+			<?php if( get_field('main_menu_style','option') == 'standard' ): ?>
+				<?php include("menu-standard.php") ;?>
+			<?php endif; ?>
 
-				<div class="row no-gutters">
-
-					<div class="col-sm d-flex">
-
-						<div class="nav-section-logo d-flex align-self-center">
-							<?php include("logo.php"); ?>
-						</div>
-
-					</div>
-
-					<div class="col-sm-6 hidden-lg-down">
-
-						<div class="nav-section-nav">
-							<?php include("menus.php"); ?>
-						</div>
-
-					</div>
-
-					<div class="col-sm d-flex flex-row-reverse">
-
-						<?php if ( get_field('cta_link','option') ): ?>
-						<div class="nav-section-cta d-flex align-self-center">
-							<?php include("cta.php"); ?>
-						</div>
-						<?php endif; ?>
-
-					</div>
-
-				</div>
-
-			</div>
+			<?php if( get_field('main_menu_style','option') == 'collapsed' ): ?>
+				<?php include("menu-collapsed.php") ;?>
+			<?php endif; ?>
 
 		</div>
 
 	</div>
 
-	<section class="nav-section tablet">
+	<?php if ( get_field('main_menu_style','option') == 'standard' ) : ?>
 
-		<?php include("menus.php"); ?>
+		<section class="nav-section tablet">
 
-	</section>
+			<?php include("menus.php"); ?>
+
+		</section>
+
+	<?php endif; ?>
 
 	<div class="nav-section-wrapper hidden-md-up">
 

@@ -9688,6 +9688,14 @@ section h2 {
   position: fixed;
   bottom: auto; }
 
+.side-bar-toggle {
+  display: inline-block;
+  height: 100px;
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 100px;
+  padding-left: 15px; }
+
 .swarm-footer {
   background: #000;
   color: #FFF;
@@ -9695,7 +9703,27 @@ section h2 {
 
 .section-headings h2 span {
   background: transparent;
-  padding: 0 15px;
+  padding: 0 15px; }
+
+.menu-container a.side-bar-toggle {
+  color: #FFF;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.66); }
+
+.menu-container a.side-bar-toggle:hover {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.66);
+  color: #000; }
+
+.menu-container a.side-bar-toggle .navbar-toggler-icon {
+  color: #FFF; }
+
+.menu-container a.side-bar-toggle:hover .navbar-toggler-icon {
+  color: #000; }
+
+.close {
+  line-height: 18px;
+  margin-bottom: 15px; }
+
+.modal-header {
   padding: 0 15px; }
 
 /*

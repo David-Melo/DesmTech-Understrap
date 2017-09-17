@@ -3,20 +3,20 @@
 
 <?php
 
-                $image = get_sub_field('image');
+    $image = get_sub_field('image');
 
-                if( !empty($image) ):
+    if( !empty($image) ):
 
-                    // vars
-                    $url = $image['url'];
-                    $title = $image['title'];
-                    $alt = $image['alt'];
+        // vars
+        $url = $image['url'];
+        $title = $image['title'];
+        $alt = $image['alt'];
 
-                    $thumb = $image['url'];
-                    $width = $image['width'];
-                    $height = $image['height'];
+        $thumb = $image['url'];
+        $width = $image['width'];
+        $height = $image['height'];
 
-            ?>
+?>
 
 <div class="<?php echo get_sub_field('image_width') == 'content' ? 'container' : 'ok' ; ?>">
 

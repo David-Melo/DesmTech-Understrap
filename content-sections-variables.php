@@ -6,13 +6,14 @@ $classes = '';
 $style = '';
 $headingStyle = '';
 
-
+$sectionLinkSlug = get_sub_field('section_slug');
 $sectionBG = get_sub_field('section_bg');
 $sectionBGMode = get_sub_field('section_bg_mode');
 $sectionBGColor= get_sub_field('section_background_color');
 $sectionTextColor= get_sub_field('section_text_color');
 $sectionHeadingColor= get_sub_field('section_heading_color');
 $sectionSubHeadingColor= get_sub_field('section_subheading_color');
+$sectionHighlightPadding= get_sub_field('image_section_highlight_padding');
 
 if( !empty($sectionBG) ):
 
