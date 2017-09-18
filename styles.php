@@ -209,7 +209,7 @@ background-image: url(<?= get_field('site_bg','option') ?>);
 
 /* -------------------------------------------------------------------------- */
 
-<?php if( get_field('site_bg','option') ): ?>
+<?php if( get_field('html_background_color','option') ): ?>
 
 html {
 background-color: <?= get_field('html_background_color','option') ?>;
