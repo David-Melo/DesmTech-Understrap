@@ -10,6 +10,7 @@ $sectionLinkSlug = get_sub_field('section_slug');
 $sectionBG = get_sub_field('section_bg');
 $sectionBGMode = get_sub_field('section_bg_mode');
 $sectionBGColor= get_sub_field('section_background_color');
+$sectionBGColor2 = get_sub_field('section_background_color_2');
 $sectionTextColor= get_sub_field('section_text_color');
 $sectionHeadingColor= get_sub_field('section_heading_color');
 $sectionSubHeadingColor= get_sub_field('section_subheading_color');
@@ -33,6 +34,17 @@ $imageBG = " background-repeat: no-repeat;background-size: cover;background-atta
 $style .= $sectionBGMode == "pattern" ? $patternBG : '';
 $style .= $sectionBGMode == "image" ? $imageBG : '';
 $style .= $sectionBGMode == "cover" ? $coverBG : '';
+
+endif;
+
+if( $sectionBGMode == 'gradient' ):
+
+$style .= "background: " . $sectionBGColor . ";";
+
+$style .= "background: -moz-linear-gradient(top, " . $sectionBGColor . " 0%, " . $sectionBGColor2 . " 100%);";
+$style .= "background: -webkit-linear-gradient(top, " . $sectionBGColor . " 0%," . $sectionBGColor2 . " 100%);";
+$style .= "background: linear-gradient(to bottom, " . $sectionBGColor . " 0%," . $sectionBGColor2 . " 100%);";
+$style .= "filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='" . $sectionBGColor . "', endColorstr='" . $sectionBGColor2 . "',GradientType=0 );";
 
 endif;
 

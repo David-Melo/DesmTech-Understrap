@@ -76,7 +76,7 @@
                 <div class="text-center add-bottom" style="max-width: <?php echo $width ;?>px"><?php the_sub_field('description'); ?></div>
                 <?php endif; ?>
 
-                <?php if ( get_sub_field('link') ) : ?>
+                <?php if ( get_sub_field('show_link') ) : ?>
                 <div class="text-center"><a href="<?php the_sub_field('link'); ?>" target="_blank" style="max-width: <?php echo $width ;?>px">Visit Website</a></div>
                 <?php endif; ?>
 
