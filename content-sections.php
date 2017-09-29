@@ -7,7 +7,9 @@
 
         <section class="section-<?= $sectionLinkSlug; ?> <?=$classes;?> <?php echo ( get_row_layout() == 'header_section' ) ? 'no-padding header-content-section' : '';?> <?php echo ( get_row_layout() == 'image_section' ) ? 'no-padding image-section' : '';?> <?php echo ( get_row_layout() == 'slider_section' ) ? 'no-padding slider-section text-center' : '' ; ?>" style="<?=$style;?>">
 
-                <div class="content-wrapper">
+                <?php the_sub_field('section_header'); ?>
+
+                <div class="content-wrapper <?php the_sub_field('content_wrapper_css_class'); ?>">
 
                     <?php include("content-sections-header.php"); ?>
                     <?php include("content-sections-image.php"); ?>
@@ -45,6 +47,8 @@
                     </div>
 
                 </div>
+
+                <?php the_sub_field('section_footer'); ?>
 
             <?php include("content-sections-slider.php"); ?>
 

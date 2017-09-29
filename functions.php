@@ -141,7 +141,7 @@ $title .= '<span>' . $text . '</span>';
 }
 
 // name
-add_filter('acf/fields/flexible_content/layout_title/name=home_page_sections', 'my_acf_flexible_content_layout_title', 10, 4);
+add_filter('acf/fields/flexible_content/layout_title/name=content_sections', 'my_acf_flexible_content_layout_title', 10, 4);
 
 function my_acf_init() {
 
