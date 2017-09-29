@@ -1,20 +1,37 @@
 /* -------------------------------------------------------------------------- */
 
-<?php if( get_field('heading_site_bar','option') != 'transparent' ): ?>
-
-header .site-bar {
-background-color: <?= get_field('heading_site_bar','option') ?> !important;
-}
-.nav-section.tablet, .bg-inverse {
-background: <?= get_field('heading_site_bar','option') ?> !important;
-}
-<?php else:?>
+<?php if( get_field('heading_site_bar_show','option') ): ?>
 body {
-padding: 0 0 !important;
+    padding-top: 40px;
 }
 .nav-section-wrapper {
-top:0;
+    top: 40px;
 }
+.header-section {
+    margin-top: 132px;
+}
+<?php endif; ?>
+
+<?php if( get_field('main_nav_background_shadow','option') ): ?>
+.nav-section-wrapper {
+    box-shadow: <?= get_field('main_nav_background_shadow','option') ?>;
+}
+<?php endif; ?>
+
+<?php if( get_field('footer_site_bar_show','option') ): ?>
+body {
+    padding-bottom: 40px;
+}
+<?php endif; ?>
+
+<?php if( get_field('heading_site_bar','option') != 'transparent' ): ?>
+header .site-bar {
+    background-color: <?= get_field('heading_site_bar','option') ?> !important;
+}
+.nav-section.tablet, .bg-inverse {
+    background: <?= get_field('heading_site_bar','option') ?> !important;
+}
+
 <?php endif; ?>
 
 /* -------------------------------------------------------------------------- */
@@ -22,7 +39,7 @@ top:0;
 <?php if( get_field('heading_site_bar_text','option') != 'transparent' ): ?>
 
 header .site-bar {
-color: <?= get_field('heading_site_bar_text','option') ?> !important;
+    color: <?= get_field('heading_site_bar_text','option') ?> !important;
 }
 
 <?php endif; ?>
@@ -58,7 +75,6 @@ header .site-bar {
 /* -------------------------------------------------------------------------- */
 
 <?php if( get_field('footer_site_bar','option') != 'transparent' ): ?>
-
 #footer-bar {
 background-color: <?= get_field('footer_site_bar','option') ?> !important;
 }

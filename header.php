@@ -110,6 +110,10 @@ if( get_field('nav_container','option') ) {
 
 		<div class="<?= $nav_container ; ?> clearfix">
 
+            <?php if( get_field('main_menu_style','option') == 'centered' ): ?>
+                <?php include("menu-centered.php") ;?>
+            <?php endif; ?>
+
 			<?php if( get_field('main_menu_style','option') == 'standard' ): ?>
 				<?php include("menu-standard.php") ;?>
 			<?php endif; ?>

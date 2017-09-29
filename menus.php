@@ -8,7 +8,7 @@
         array(
             'theme_location'  => 'primary',
             'container_class' => 'menu-container',
-            'menu_class'      => 'primary_menu nav justify-content-between',
+            'menu_class'      => 'primary_menu nav justify-content-center',
             'menu_id'         => '',
             'walker'          => new WP_Bootstrap_Navwalker(),
         )

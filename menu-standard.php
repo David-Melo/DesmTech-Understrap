@@ -2,6 +2,14 @@
 
     <div class="row no-gutters">
 
+        <div class="col-sm d-flex">
+
+            <div class="nav-section-logo d-flex align-self-center">
+                <?php include("logo.php"); ?>
+            </div>
+
+        </div>
+
         <div class="col-sm-6 hidden-lg-down">
 
             <div class="nav-section-nav">
