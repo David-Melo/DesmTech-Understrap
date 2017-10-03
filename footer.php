@@ -256,6 +256,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php include("structured_data.php") ;?>
 
+<?php the_field('ga','option'); ?>
+
 </body>
 
 </html>

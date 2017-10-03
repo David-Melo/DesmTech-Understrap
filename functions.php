@@ -112,6 +112,13 @@ if( function_exists('acf_add_options_page') ) {
         'redirect'   	=> false
     ));
 
+    $option_page = acf_add_options_page(array(
+        'page_title' 	=> 'Tracking Scripts',
+        'menu_title' 	=> 'Tracking Scripts',
+        'menu_slug'  	=> 'tracking-and-analytics',
+        'redirect' 	    => false
+    ));
+
 }
 
 function my_acf_flexible_content_layout_title( $title, $field, $layout, $i ) {

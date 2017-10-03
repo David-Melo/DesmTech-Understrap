@@ -18,6 +18,9 @@ if( get_field('nav_container','option') ) {
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+
+    <?php the_field('gtm_1','option'); ?>
+
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,6 +40,8 @@ if( get_field('nav_container','option') ) {
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php the_field('gtm_2','option'); ?>
 
 <div class="body-overlay"></div>
 
