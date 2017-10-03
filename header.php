@@ -89,18 +89,27 @@ if( get_field('nav_container','option') ) {
 		</div>
 
 		<div class="col-auto clearfix">
+
+            <?php if ( get_field('alternate_cta','option') ): ?>
+                <div class="nav-section-cta float-right hidden-md-up ml-3 clearfix">
+                    <?php the_field('alternate_cta','option'); ?>
+                </div>
+            <?php endif; ?>
+
 			<?php if ( get_field('cta_link','option') ): ?>
-			<div class="nav-section-cta float-right ml-3 hidden-md-up clearfix">
-				<?php include("cta-small.php"); ?>
-			</div>
+                <div class="nav-section-cta float-right ml-3 hidden-md-up clearfix">
+                    <?php include("cta-small.php"); ?>
+                </div>
 			<?php endif; ?>
+
 			<div class="mobile-number-cta float-md-right">
 				<? if ( !get_field('hide_phone_cta_mobile','option') ) : ?>
-				<? if ( get_field('phone_number','option') ) : ?>
-				<i class="fa fa-phone brand-highlight"></i> <span><a href="tel:<?= the_field('phone_number','option'); ?>"><?= the_field('phone_number','option'); ?></a></span>
-				<? endif; ?>
+                    <? if ( get_field('phone_number','option') ) : ?>
+                        <i class="fa fa-phone brand-highlight"></i> <span><a href="tel:<?= the_field('phone_number','option'); ?>"><?= the_field('phone_number','option'); ?></a></span>
+                    <? endif; ?>
 				<? endif; ?>
 			</div>
+
 		</div>
 
 		<?php include("menus-mobile.php"); ?>

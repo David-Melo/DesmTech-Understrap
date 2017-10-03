@@ -31,7 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				</div>
 				<div class="col-md-4 text-center mb-sm-4">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.png" alt="" width="150" />
+					<img src="<?= get_template_directory_uri() . '/img/swarm-logo-white.png' ;?>" alt="" width="150" />
 					<div style="color: #00ffff;">© 2017 SWARM Event Agency</div>
 					<div style="color: #00ffff;">All rights reserved</div>
 				</div>
@@ -143,44 +143,53 @@ $container = get_theme_mod( 'understrap_container_type' );
                 draggable: true
             };
 
-            console.log(args);
-
             var map = new google.maps.Map( $el[0], args);
 
             var request = {
                 placeId: $place
             };
 
-            var service = new google.maps.places.PlacesService(map);
-            service.getDetails(request, callback);
+            if(request.placeId.split('').length){
 
-            function callback (place, status) {
-                if (status == google.maps.places.PlacesServiceStatus.OK) {
+                var service = new google.maps.places.PlacesService(map);
+                service.getDetails(request, callback);
 
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        place: {
-                            placeId: place.place_id,
-                            location: place.geometry.location
-                        }
-                    });
+                function callback (place, status) {
+                    if (status == google.maps.places.PlacesServiceStatus.OK) {
 
-                    var infowindow = new google.maps.InfoWindow({
-                        content: '<strong>' + place.name + '</strong><br>' +
-                        place.adr_address + '<br>' +
-                        place.formatted_phone_number + '<br>' +
-                        '<a href="' + place.url + '" target="_blank">Get Directions</a>'
-                    });
+                        var marker = new google.maps.Marker({
+                            map: map,
+                            place: {
+                                placeId: place.place_id,
+                                location: place.geometry.location
+                            }
+                        });
 
-                    // show info window when marker is clicked
-                    google.maps.event.addListener(marker, 'click', function() {
+                        var infowindow = new google.maps.InfoWindow({
+                            content: '<strong>' + place.name + '</strong><br>' +
+                            place.adr_address + '<br>' +
+                            place.formatted_phone_number + '<br>' +
+                            '<a href="' + place.url + '" target="_blank">Get Directions</a>'
+                        });
+
+                        // show info window when marker is clicked
+                        google.maps.event.addListener(marker, 'click', function() {
+                            infowindow.open( map, marker );
+                        });
+
                         infowindow.open( map, marker );
-                    });
 
-                    infowindow.open( map, marker );
+                    }
+                };
 
-                }
-            };
+            } else {
+
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: latlng
+                });
+
+            }
 
             return map;
 

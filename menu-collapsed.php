@@ -12,6 +12,12 @@
 
         <div class="col-sm d-flex justify-content-end">
 
+            <?php if ( get_field('alternate_cta','option') ): ?>
+                <div class="nav-section-cta float-right ml-3 clearfix">
+                    <?php the_field('alternate_cta','option'); ?>
+                </div>
+            <?php endif; ?>
+
             <?php if ( get_field('cta_link','option') ): ?>
             <div class="nav-section-cta d-flex align-self-center">
                 <?php include("cta.php"); ?>
