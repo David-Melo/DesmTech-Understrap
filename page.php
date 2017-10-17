@@ -15,6 +15,12 @@ get_header();
 $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
+$page_container = 'container';
+
+if( get_field('page_container','option') ) {
+    $page_container = get_field('page_container','option') ;
+}
+
 ?>
 
 <div class="wrapper" id="page-wrapper">

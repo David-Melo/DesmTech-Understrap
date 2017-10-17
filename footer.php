@@ -9,6 +9,13 @@
 
 $the_theme = wp_get_theme();
 $container = get_theme_mod( 'understrap_container_type' );
+
+$page_container = 'container';
+
+if( get_field('page_container','option') ) {
+    $page_container = get_field('page_container','option') ;
+}
+
 ?>
 
 <?php get_sidebar( 'footerfull' ); ?>
