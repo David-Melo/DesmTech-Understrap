@@ -37,6 +37,8 @@ if( get_field('nav_container','option') ) {
 
 	</style>
 
+    <link rel='stylesheet' href='<?= get_template_directory_uri() . '/css/fonts/gotham-stylesheet.css' ;?>' type='text/css' media='all' />
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -78,7 +80,7 @@ if( get_field('nav_container','option') ) {
 
 	</section>
 
-	<nav class="navbar navbar-toggleable-lg navbar-inverse bg-inverse hidden-lg-up clearfix">
+	<nav class="navbar navbar-toggleable-lg navbar-inverse bg-inverse hidden-md-up clearfix">
 
 		<div class="col">
 

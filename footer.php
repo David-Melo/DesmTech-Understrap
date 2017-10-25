@@ -27,19 +27,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="row mb-2">
 				<div class="col-md-4 text-md-left text-sm-center mb-sm-4">
-					<p><strong>SWARM, Inc.</strong> is an <a href="https://swarminc.com" target="_blank" title="SWARM, Inc.">event agency</a> located in Wynwood, Miami, Florida. We are focused on the production, marketing, concessions, and all around logistics of your next event.</p>
+					<p class="mb-4"><strong>SWARM, Inc.</strong> is an <a href="https://swarminc.com" target="_blank" title="SWARM, Inc.">event agency</a> located in Wynwood, Miami, Florida. We are focused on the production, marketing, concessions, and all around logistics of your next event.</p>
 
 				</div>
 				<div class="col-md-4 text-center mb-sm-4">
 					<img src="<?= get_template_directory_uri() . '/img/swarm-logo-white.png' ;?>" alt="" width="150" />
 					<div style="color: #00ffff;">© 2017 SWARM Event Agency</div>
-					<div style="color: #00ffff;">All rights reserved</div>
+					<div class="mb-4" style="color: #00ffff;">All rights reserved</div>
 				</div>
-				<div class="col-md-4 text-md-right text-sm-center mb-sm-2">
+				<div class="col-md-4 text-md-right text-center text-lg-right text-md-right mb-sm-2">
 					<div><strong>SWARM Event Agency</strong></div>
 					<div><strong>305.461.2700</strong></div>
 					<div><strong>2308 NW 5 Ave</strong></div>
-					<div><strong>Wywnood, FL 33127</strong></div>
+					<div class="mb-4"><strong>Wywnood, FL 33127</strong></div>
 				</div>
 			</div>
 

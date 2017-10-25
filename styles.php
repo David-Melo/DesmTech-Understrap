@@ -281,12 +281,12 @@ background-color: <?= get_field('section_heading_bg','option') ?>;
 }
 
 .logo-wrapper img {
-    height: 80px;
+    height: 60px;
 }
 
 @media (max-width: 1321px) {
     .header-section {
-        margin-top: 100px;
+        */margin-top: 80px;*/
     }
 }
 

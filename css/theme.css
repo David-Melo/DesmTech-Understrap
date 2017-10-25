@@ -9492,14 +9492,15 @@ section h2 {
     padding: 20px 0; }
   nav {
     position: fixed !important;
-    top: 140px;
+    top: 100px;
     left: 0;
     right: 0;
     z-index: 16; }
   .logo-wrapper {
     right: 0;
     text-align: center;
-    display: block; }
+    display: block;
+    padding: 20px 0; }
   #content {
     padding: 40px 25px; }
   .navbar-collapse {
@@ -9520,7 +9521,7 @@ section h2 {
 
 @media (min-width: 500px) and (max-width: 768px) {
   .nav-section-wrapper {
-    top: 34px; }
+    top: 0px; }
   .text-xs-center {
     text-align: center; }
   .site-bar {
@@ -9534,7 +9535,7 @@ section h2 {
     display: inline-block;
     float: right; }
   nav {
-    top: 134px; }
+    top: 100px; }
   .header-section {
     margin-top: 152px; } }
 
@@ -9571,7 +9572,7 @@ section h2 {
 
 @media (max-width: 1321px) {
   .header-section {
-    margin-top: 156px; } }
+    margin-top: 135px; } }
 
 @media (min-width: 769px) and (max-width: 1321px) {
   .nav-section.desktop {
@@ -9625,7 +9626,7 @@ section h2 {
 
 @media (max-width: 739px) {
   .header-section {
-    margin-top: 170px; } }
+    margin-top: 135px; } }
 
 @media (min-width: 770px) and (max-width: 988px) {
   .right-content {
