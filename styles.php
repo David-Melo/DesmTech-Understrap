@@ -7,6 +7,11 @@ body {
 .nav-section-wrapper {
     top: 40px;
 }
+@media (max-width: 768px){
+.header-section {
+    margin-top: 116px;
+}
+}
 .header-section {
     margin-top: 132px;
 }
