@@ -84,28 +84,28 @@ if( get_field('nav_container','option') ) {
 
 		<div class="d-flex justify-content-between">
 
-			<button class="navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
             <?php if ( get_field('alternate_cta','option') ): ?>
-                <div class="nav-section-cta float-right hidden-md-up ml-3 clearfix">
+                <div class="nav-section-cta hidden-md-up">
                     <?php the_field('alternate_cta','option'); ?>
                 </div>
             <?php endif; ?>
 
             <?php if ( get_field('cta_link','option') ): ?>
-                <div class="nav-section-cta float-right ml-3 hidden-md-up clearfix">
+                <div class="nav-section-cta hidden-md-up">
                     <?php include("cta-small.php"); ?>
                 </div>
             <?php endif; ?>
 
             <? if ( !get_field('hide_phone_cta_mobile','option') ) : ?>
-                <div class="mobile-number-cta float-md-right">
-                    <? if ( get_field('phone_number','option') ) : ?>
+                <? if ( get_field('phone_number','option') ) : ?>
+                    <div class="mobile-number-cta">
                         <i class="fa fa-phone brand-highlight"></i> <span><a href="tel:<?= the_field('phone_number','option'); ?>"><?= the_field('phone_number','option'); ?></a></span>
-                    <? endif; ?>
-                </div>
+                    </div>
+                <? endif; ?>
             <? endif; ?>
 
 		</div>
@@ -134,9 +134,23 @@ if( get_field('nav_container','option') ) {
 				<?php include("menu-collapsed.php") ;?>
 			<?php endif; ?>
 
+            <?php if( get_field('main_menu_style','option') == 'independent' ): ?>
+                <?php include("menu-independent.php") ;?>
+            <?php endif; ?>
+
 		</div>
 
 	</div>
+
+    <?php if ( get_field('main_menu_style','option') == 'independent' ) : ?>
+
+        <section class="nav-section nav-section-independent">
+
+            <?php include("menus.php"); ?>
+
+        </section>
+
+    <?php endif; ?>
 
 	<?php if ( get_field('main_menu_style','option') == 'standard' ) : ?>
 

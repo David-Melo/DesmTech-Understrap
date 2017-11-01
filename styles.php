@@ -1,5 +1,11 @@
 /* -------------------------------------------------------------------------- */
 
+<?php if( get_field('main_menu_style','option') == 'independent' ): ?>
+.header-section {
+    padding-top: 40px !important;
+}
+<?php endif; ?>
+
 <?php if( get_field('heading_site_bar_show','option') ): ?>
 body {
     padding-top: 40px;

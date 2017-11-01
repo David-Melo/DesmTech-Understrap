@@ -42,6 +42,10 @@ section {
   padding: 60px 0;
 }
 
+.site > #page-wrapper > section.header-section {
+  padding: 0;
+}
+
 .site section p {
   font-size: 22px;
 }
@@ -133,7 +137,7 @@ a.anchor {
 .header-section {
   margin-top: 100px;
   height: 0;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .highlight-image {
@@ -342,6 +346,9 @@ section h2 {
   .nav-section .nav-link {
     font-size: 16px;
   }
+  .nav-section-independent .nav-link {
+    line-height: 24px !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -354,7 +361,6 @@ section h2 {
   .nav-section {
     padding: 0px;
     /*position: absolute;*/
-    bottom: 0;
     left: 0;
     right: 0;
     /*box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.18);*/
@@ -371,7 +377,7 @@ section h2 {
 
 @media (max-width: 1321px) {
   .header-section {
-    margin-top: 135px;
+    margin-top: 100px;
   }
 }
 
@@ -455,7 +461,7 @@ section h2 {
 @media (max-width: 739px) {
 
   .header-section {
-    margin-top: 135px;
+    margin-top: 100px;
   }
 
 }
@@ -467,6 +473,14 @@ section h2 {
   }
 
 
+}
+
+.btn-lg {
+  padding: .65rem 1.5rem;
+}
+
+.navbar-toggleable-lg {
+  min-height: 60px;
 }
 
 #single-wrapper {
@@ -569,4 +583,13 @@ section h2 {
 
 .modal-header {
   padding: 0 15px;
+}
+
+.nav-section-independent {
+  padding: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 100px;
+  z-index: 10;
 }
