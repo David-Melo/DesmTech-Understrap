@@ -37,6 +37,8 @@ if( get_field('nav_container','option') ) {
 
 	</style>
 
+    <link rel='stylesheet' href='<?= get_template_directory_uri() . '/css/fonts/gotham-stylesheet.css' ;?>' type='text/css' media='all' />
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -78,37 +80,33 @@ if( get_field('nav_container','option') ) {
 
 	</section>
 
-	<nav class="navbar navbar-toggleable-lg navbar-inverse bg-inverse hidden-lg-up clearfix">
+	<nav class="navbar navbar-toggleable-lg navbar-inverse bg-inverse hidden-md-up">
 
-		<div class="col">
+		<div class="d-flex justify-content-between">
 
-			<button class="navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-		</div>
-
-		<div class="col-auto clearfix">
-
             <?php if ( get_field('alternate_cta','option') ): ?>
-                <div class="nav-section-cta float-right hidden-md-up ml-3 clearfix">
+                <div class="nav-section-cta hidden-md-up">
                     <?php the_field('alternate_cta','option'); ?>
                 </div>
             <?php endif; ?>
 
-			<?php if ( get_field('cta_link','option') ): ?>
-                <div class="nav-section-cta float-right ml-3 hidden-md-up clearfix">
+            <?php if ( get_field('cta_link','option') ): ?>
+                <div class="nav-section-cta hidden-md-up">
                     <?php include("cta-small.php"); ?>
                 </div>
-			<?php endif; ?>
+            <?php endif; ?>
 
-			<div class="mobile-number-cta float-md-right">
-				<? if ( !get_field('hide_phone_cta_mobile','option') ) : ?>
-                    <? if ( get_field('phone_number','option') ) : ?>
+            <? if ( !get_field('hide_phone_cta_mobile','option') ) : ?>
+                <? if ( get_field('phone_number','option') ) : ?>
+                    <div class="mobile-number-cta">
                         <i class="fa fa-phone brand-highlight"></i> <span><a href="tel:<?= the_field('phone_number','option'); ?>"><?= the_field('phone_number','option'); ?></a></span>
-                    <? endif; ?>
-				<? endif; ?>
-			</div>
+                    </div>
+                <? endif; ?>
+            <? endif; ?>
 
 		</div>
 
@@ -136,9 +134,23 @@ if( get_field('nav_container','option') ) {
 				<?php include("menu-collapsed.php") ;?>
 			<?php endif; ?>
 
+            <?php if( get_field('main_menu_style','option') == 'independent' ): ?>
+                <?php include("menu-independent.php") ;?>
+            <?php endif; ?>
+
 		</div>
 
 	</div>
+
+    <?php if ( get_field('main_menu_style','option') == 'independent' ) : ?>
+
+        <section class="nav-section nav-section-independent">
+
+            <?php include("menus.php"); ?>
+
+        </section>
+
+    <?php endif; ?>
 
 	<?php if ( get_field('main_menu_style','option') == 'standard' ) : ?>
 

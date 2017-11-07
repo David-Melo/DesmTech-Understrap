@@ -1,11 +1,22 @@
 /* -------------------------------------------------------------------------- */
 
+<?php if( get_field('main_menu_style','option') == 'independent' ): ?>
+.header-section {
+    padding-top: 40px !important;
+}
+<?php endif; ?>
+
 <?php if( get_field('heading_site_bar_show','option') ): ?>
 body {
     padding-top: 40px;
 }
 .nav-section-wrapper {
     top: 40px;
+}
+@media (max-width: 768px){
+.header-section {
+    margin-top: 116px;
+}
 }
 .header-section {
     margin-top: 132px;
@@ -281,12 +292,12 @@ background-color: <?= get_field('section_heading_bg','option') ?>;
 }
 
 .logo-wrapper img {
-    height: 80px;
+    height: 60px;
 }
 
 @media (max-width: 1321px) {
     .header-section {
-        margin-top: 100px;
+        */margin-top: 80px;*/
     }
 }
 

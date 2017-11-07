@@ -1,46 +1,54 @@
 <!-- ------------------------------------------------------------------------ -->
 
-<?php if( get_field('main_menu_mode','option') == 'primary' && get_field('main_menu_style','option') == 'standard'): ?>
+<?php if( get_field('main_menu_mode','option') == 'primary' && (get_field('main_menu_style','option') == 'standard' || get_field('main_menu_style','option') == 'independent') ) : ?>
 
-<div class="menu-container">
+    <div class="<?= $nav_container ; ?>">
 
-    <?php wp_nav_menu(
-        array(
-            'theme_location'  => 'primary',
-            'container_class' => 'menu-container',
-            'menu_class'      => 'primary_menu nav justify-content-center',
-            'menu_id'         => '',
-            'walker'          => new WP_Bootstrap_Navwalker(),
-        )
-    ); ?>
+        <div class="menu-container">
 
-</div>
+            <?php wp_nav_menu(
+                array(
+                    'theme_location'  => 'primary',
+                    'container_class' => 'menu-container',
+                    'menu_class'      => 'primary_menu nav justify-content-between',
+                    'menu_id'         => '',
+                    'walker'          => new WP_Bootstrap_Navwalker(),
+                )
+            ); ?>
+
+        </div>
+
+    </div>
 
 <?php endif; ?>
 
 <!-- ------------------------------------------------------------------------ -->
 
-<?php if( get_field('main_menu_mode','option') == 'content' && get_field('main_menu_style','option') == 'standard' ): ?>
+<?php if( get_field('main_menu_mode','option') == 'content' && (get_field('main_menu_style','option') == 'standard' || get_field('main_menu_style','option') == 'independent') ): ?>
 
-<div class="menu-container">
+    <div class="<?= $nav_container ; ?>">
 
-    <ul class="nav justify-content-center primary-menu">
+        <div class="menu-container">
 
-        <?php if( have_rows('content_sections') ): ?>
-        <?php while ( have_rows('content_sections') ) : the_row(); ?>
-        <?php if ( get_sub_field('section_slug') ) : ?>
-        <li class="nav-item">
-            <a class="nav-link menu-link" href="#section-<?php the_sub_field('section_slug'); ?>">
-                <?php the_sub_field('section_link_title'); ?>
-            </a>
-        </li>
-        <?php endif; ?>
-        <?php endwhile; ?>
-        <?php endif; ?>
+            <ul class="nav justify-content-center primary-menu">
 
-    </ul>
+                <?php if( have_rows('content_sections') ): ?>
+                <?php while ( have_rows('content_sections') ) : the_row(); ?>
+                <?php if ( get_sub_field('section_slug') ) : ?>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="#section-<?php the_sub_field('section_slug'); ?>">
+                        <?php the_sub_field('section_link_title'); ?>
+                    </a>
+                </li>
+                <?php endif; ?>
+                <?php endwhile; ?>
+                <?php endif; ?>
 
-</div>
+            </ul>
+
+        </div>
+
+    </div>
 
 <?php endif; ?>
 

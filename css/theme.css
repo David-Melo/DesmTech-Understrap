@@ -9340,6 +9340,9 @@ section {
 .site > #page-wrapper > section {
   padding: 60px 0; }
 
+.site > #page-wrapper > section.header-section {
+  padding: 0; }
+
 .site section p {
   font-size: 22px; }
 
@@ -9408,7 +9411,7 @@ a.anchor {
 .header-section {
   margin-top: 100px;
   height: 0;
-  padding: 0 !important; }
+  padding: 0; }
 
 .highlight-image {
   display: inline-block; }
@@ -9492,14 +9495,15 @@ section h2 {
     padding: 20px 0; }
   nav {
     position: fixed !important;
-    top: 140px;
+    top: 100px;
     left: 0;
     right: 0;
     z-index: 16; }
   .logo-wrapper {
     right: 0;
     text-align: center;
-    display: block; }
+    display: block;
+    padding: 0px 0; }
   #content {
     padding: 40px 25px; }
   .navbar-collapse {
@@ -9520,11 +9524,11 @@ section h2 {
 
 @media (min-width: 500px) and (max-width: 768px) {
   .nav-section-wrapper {
-    top: 34px; }
+    top: 0px; }
   .text-xs-center {
     text-align: center; }
   .site-bar {
-    height: 34px;
+    height: 40px;
     line-height: 24px;
     padding: 5px 5px; }
   .text-sm-left {
@@ -9534,7 +9538,7 @@ section h2 {
     display: inline-block;
     float: right; }
   nav {
-    top: 134px; }
+    top: 100px; }
   .header-section {
     margin-top: 152px; } }
 
@@ -9550,7 +9554,9 @@ section h2 {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .nav-section .nav-link {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .nav-section-independent .nav-link {
+    line-height: 24px !important; } }
 
 @media (min-width: 768px) {
   .ticket-cta-wrapper {
@@ -9558,7 +9564,6 @@ section h2 {
   .nav-section {
     padding: 0px;
     /*position: absolute;*/
-    bottom: 0;
     left: 0;
     right: 0;
     /*box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.18);*/ } }
@@ -9571,7 +9576,7 @@ section h2 {
 
 @media (max-width: 1321px) {
   .header-section {
-    margin-top: 156px; } }
+    margin-top: 100px; } }
 
 @media (min-width: 769px) and (max-width: 1321px) {
   .nav-section.desktop {
@@ -9625,11 +9630,17 @@ section h2 {
 
 @media (max-width: 739px) {
   .header-section {
-    margin-top: 170px; } }
+    margin-top: 100px; } }
 
 @media (min-width: 770px) and (max-width: 988px) {
   .right-content {
     padding: 40px 0; } }
+
+.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit] {
+  padding: .65rem 1.5rem; }
+
+.navbar-toggleable-lg {
+  min-height: 60px; }
 
 #single-wrapper {
   margin-top: 50px; }
@@ -9723,6 +9734,14 @@ section h2 {
 
 .modal-header {
   padding: 0 15px; }
+
+.nav-section-independent {
+  padding: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 100px;
+  z-index: 10; }
 
 /*
 * Use existing Bootstrap 4 classes and
