@@ -34,6 +34,7 @@
 
                     <?php if ( get_sub_field('content_position') != 'after' ) : ?>
                         <?php the_sub_field('section_content'); ?>
+                        <?php the_sub_field('section_code'); ?>
                     <?php endif; ?>
 
                     <?php include("content-sections-highlights.php"); ?>
@@ -42,6 +43,7 @@
 
                     <?php if ( get_sub_field('content_position') == 'after' ) : ?>
                         <?php the_sub_field('section_content'); ?>
+                        <?php the_sub_field('section_code'); ?>
                     <?php endif; ?>
 
                 </div>

@@ -2479,7 +2479,7 @@ tbody.collapse.show {
     background-color: transparent; }
 
 .show > .dropdown-menu {
-  display: block; }
+  /*display: block;*/ }
 
 .show > a {
   outline: 0; }
@@ -9360,7 +9360,7 @@ h1, h2, h3 {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 8;
+  z-index: 199;
   background: #FFF; }
 
 .nav-section {
@@ -9448,7 +9448,7 @@ section h2 {
   z-index: 2; }
 
 #wrapper-footer section {
-  padding: 60px 0; }
+  padding: 0px 0; }
 
 #wrapper-footer .social-section {
   padding-top: 0 !important; }
@@ -9578,7 +9578,7 @@ section h2 {
   .header-section {
     margin-top: 100px; } }
 
-@media (min-width: 769px) and (max-width: 1321px) {
+@media (min-width: 769px) and (max-width: 1440px) {
   .nav-section.desktop {
     display: none; }
   .nav-section.tablet {

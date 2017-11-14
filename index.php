@@ -21,60 +21,47 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	<?php get_template_part( 'global-templates/hero', 'none' ); ?>
 <?php endif; ?>
 
-<div class="wrapper" id="wrapper-index">
+<div class="wrapper site-main posts" id="wrapper-index">
 
 	<section class="header-section"></section>
 
-	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
+    <?php include('content-sections-blog.php'); ?>
 
-		<div class="row">
+	<div class="container-fluid" tabindex="-1">
 
-			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
+        <main class="" id="main">
 
-			<main class="site-main" id="main">
+            <?php if ( have_posts() ) : ?>
 
-				<?php if ( have_posts() ) : ?>
+                <?php /* Start the Loop */ ?>
 
-					<?php /* Start the Loop */ ?>
+                <?php while ( have_posts() ) : the_post(); ?>
 
-					<?php while ( have_posts() ) : the_post(); ?>
+                    <?php
 
-						<?php
+                    /*
+                     * Include the Post-Format-specific template for the content.
+                     * If you want to override this in a child theme, then include a file
+                     * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                     */
+                    get_template_part( 'loop-templates/content', get_post_format() );
+                    ?>
 
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'loop-templates/content', get_post_format() );
-						?>
+                <?php endwhile; ?>
 
-					<?php endwhile; ?>
+            <?php else : ?>
 
-				<?php else : ?>
+                <?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
-					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+            <?php endif; ?>
 
-				<?php endif; ?>
+        </main><!-- #main -->
 
-			</main><!-- #main -->
+        <!-- The pagination component -->
+        <?php understrap_pagination(); ?>
 
-			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
 
-		</div><!-- #primary -->
-
-		<!-- Do the right sidebar check -->
-		<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
-
-			<?php get_sidebar( 'right' ); ?>
-
-		<?php endif; ?>
-
-	</div><!-- .row -->
-
-</div><!-- Container end -->
+    </div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 

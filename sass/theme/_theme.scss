@@ -74,7 +74,7 @@ h1, h2, h3 {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 8;
+  z-index: 199;
   background: #FFF;
 }
 
@@ -183,7 +183,7 @@ section h2 {
 }
 
 #wrapper-footer section {
-  padding: 60px 0;
+  padding: 0px 0;
 }
 
 #wrapper-footer .social-section {
@@ -381,7 +381,7 @@ section h2 {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1321px){
+@media (min-width: 769px) and (max-width: 1440px){
   .nav-section.desktop {
     display: none;
   }

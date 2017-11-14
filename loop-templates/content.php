@@ -9,42 +9,56 @@
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+    <div class="image-section">
+        <img src="<?=get_the_post_thumbnail_url( $post->ID, 'original' ); ?>" alt="<?the_title();?>">
+    </div>
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-		'</a></h2>' ); ?>
+    <div class="py-5 my-5">
 
-		<?php if ( 'post' == get_post_type() ) : ?>
+        <div class="container">
 
-			<div class="entry-meta">
-				<?php understrap_posted_on(); ?>
-			</div><!-- .entry-meta -->
+            <header class="entry-header">
 
-		<?php endif; ?>
+                <?php the_title( sprintf( '<h2 class="entry-title text-center text-uppercase"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+                    '</a></h2>' ); ?>
 
-	</header><!-- .entry-header -->
+                <?php if ( 'post' == get_post_type() ) : ?>
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+                    <!--<div class="entry-meta">
+				<?php /*understrap_posted_on(); */?>
+			</div>-->
 
-	<div class="entry-content">
+                <?php endif; ?>
 
-		<?php
-		the_excerpt();
-		?>
+            </header><!-- .entry-header -->
 
-		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
-		) );
-		?>
+            <div class="entry-content">
 
-	</div><!-- .entry-content -->
+                <div class="brand-thin brand-blue blog-ex">
+                    <?php
+                        the_excerpt();
+                    ?>
+                </div>
 
-	<footer class="entry-footer">
+                <?php
+                wp_link_pages( array(
+                    'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+                    'after'  => '</div>',
+                ) );
+                ?>
 
-		<?php understrap_entry_footer(); ?>
+            </div><!-- .entry-content -->
 
-	</footer><!-- .entry-footer -->
+        </div>
+
+    </div>
+
+
+
+	<!--footer class="entry-footer">
+
+		<?php /*understrap_entry_footer(); */?>
+
+	</footer>-->
 
 </article><!-- #post-## -->
