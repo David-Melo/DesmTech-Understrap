@@ -87,6 +87,37 @@ if( get_field('page_container','option') ) {
 
 <?php the_field('ga','option'); ?>
 
+<script src="https://cdn.jsdelivr.net/gh/stefangabos/Zebra_Pin/dist/zebra_pin.min.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+
+        var nav = jQuery('.information-nav');
+        var wrapper = jQuery('.information-nav-wrapper');
+        var window = jQuery('body').width();
+        var top_spacing = 120;
+        var header = jQuery('.header-section').outerHeight();
+
+        if(window>800){
+
+            nav.css('width',nav.outerWidth());
+            wrapper.css('width',nav.outerWidth()+30);
+
+            top_spacing = header + 20;
+
+            console.log(header);
+
+            new jQuery.Zebra_Pin(jQuery('.information-nav'), {
+                contain: true,
+                top_spacing: top_spacing,
+                z_index: 14
+            });
+
+        }
+
+    });
+</script>
+
 </body>
 
 </html>

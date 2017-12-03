@@ -116,8 +116,8 @@ function shortcode_make_acf_tickets($params = array()) {
                             $ticket_terms_conditions
     
                         </div>
-                        <div class='card-footer ticket-background'>
-                            <a href='" . get_field('details_link') . "' title='" . get_the_title() . "'>BUY</a>
+                        <div class='card-footer ticket-background'> 
+                            <a href='" . get_field('buy_link') . "' title='" . get_the_title() . "' target='_blank'>BUY</a>
                         </div>
                     </div>
                 ";

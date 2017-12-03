@@ -10,46 +10,74 @@ $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
-<div class="wrapper" id="single-wrapper">
+<div class="wrapper">
 
-	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
+    <section class="header-section"></section>
 
-		<div class="row">
+    <main class="site-main" id="main">
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
-			<main class="site-main" id="main">
+            <div class="text-center mb-3 mb-md-5">
+                <?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
+            </div>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+            <div class="<?php echo esc_html( $container ); ?>" tabindex="-1">
 
-					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+                <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-						<?php understrap_post_nav(); ?>
+                    <header class="entry-header">
 
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
+                        <?php the_title( '<h1 class="entry-title brand-blue text-uppercase text-center">', '</h1>' ); ?>
 
-				<?php endwhile; // end of the loop. ?>
+                        <div class="entry-meta brand-thin text-center">
 
-			</main><!-- #main -->
+                            <?php understrap_posted_on(); ?>
 
-		</div><!-- #primary -->
+                        </div><!-- .entry-meta -->
 
-		<!-- Do the right sidebar check -->
-		<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
+                    </header><!-- .entry-header -->
 
-			<?php get_sidebar( 'right' ); ?>
+                    <div class="entry-content my-4">
 
-		<?php endif; ?>
+                        <div class="brand-thin text-justify">
+                            <?php the_content(); ?>
+                        </div>
 
-	</div><!-- .row -->
+                        <?php
+                        wp_link_pages( array(
+                            'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+                            'after'  => '</div>',
+                        ) );
+                        ?>
 
-</div><!-- Container end -->
+                    </div><!-- .entry-content -->
+
+                </article><!-- #post-## -->
+
+                <div class="">
+                    <?php understrap_post_nav(); ?>
+                </div>
+
+            </div>
+
+        <?php endwhile; // end of the loop. ?>
+
+    </main><!-- #main -->
+
+    <hr>
+
+    <section class="pt-3 pb-1 pt-md-5 pt-md-3">
+
+        <div class="<?php echo esc_html( $container ); ?>" tabindex="-1">
+
+            <div class="h3 brand-blue text-uppercase text-center">Recent Blog Posts</div>
+
+            <?php echo do_shortcode("[pt_view id=6295581d90]"); ?>
+
+        </div>
+
+    </section>
 
 </div><!-- Wrapper end -->
 
