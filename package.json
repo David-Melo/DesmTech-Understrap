@@ -3,9 +3,6 @@
   "version": "0.6.2",
   "description": "Wordpress Theme framework",
   "main": "index.js",
-  "scripts": {
-    "postinstall": "gulp copy-assets"
-  },
   "engines": {
     "npm": ">=2.1.8"
   },
