@@ -1,5 +1,403 @@
 [
     {
+        "key": "group_59cae666b0919",
+        "title": "Artists",
+        "fields": [
+            {
+                "key": "field_5a2140256bc81",
+                "label": "Directory Last Name",
+                "name": "directory_last_name",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a21403e8d2cf",
+                "label": "Directory First Name",
+                "name": "directory_first_name",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a054637240bb",
+                "label": "Booth Number",
+                "name": "booth_number",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a05462d240ba",
+                "label": "Medium",
+                "name": "medium",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "34",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a2140658d2d0",
+                "label": "From (Location)",
+                "name": "from_location",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a054655240bd",
+                "label": "External Link",
+                "name": "external_link",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a054649240bc",
+                "label": "Biography",
+                "name": "biography",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_5a21410a5b605",
+                "label": "Business Name",
+                "name": "business_name",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a2141185b606",
+                "label": "Social Links",
+                "name": "social_links",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5a2141395b607",
+                        "label": "Network",
+                        "name": "network",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "facebook": "Facebook",
+                            "twitter": "Twitter",
+                            "instagram": "Instagram",
+                            "youtube": "YouTube",
+                            "etsy": "Etsy",
+                            "linkedin": "LinkedIn",
+                            "pinterest": "Pinterest"
+                        },
+                        "default_value": [],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 0,
+                        "ajax": 0,
+                        "return_format": "value",
+                        "placeholder": ""
+                    },
+                    {
+                        "key": "field_5a21419c5b608",
+                        "label": "URL",
+                        "name": "url",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            },
+            {
+                "key": "field_5a2141a85b609",
+                "label": "Artist Gallery",
+                "name": "artist_gallery",
+                "type": "gallery",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                },
+                "min": "",
+                "max": "",
+                "insert": "append",
+                "library": "uploadedTo",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "artist"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content"
+        ],
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_59cae309a5caa",
+        "title": "Exhibition",
+        "fields": [
+            {
+                "key": "field_59cae32709a4e",
+                "label": "Artist Name",
+                "name": "artist_name",
+                "type": "relationship",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "artist"
+                ],
+                "taxonomy": [],
+                "filters": [
+                    "search"
+                ],
+                "elements": "",
+                "min": 1,
+                "max": 1,
+                "return_format": "object"
+            },
+            {
+                "key": "field_5a0435c641b6e",
+                "label": "Medium",
+                "name": "medium",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a0435f6c6d8f",
+                "label": "Location",
+                "name": "location",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_59cae31709a4d",
+                "label": "Date and Time",
+                "name": "date_and_time",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_59cae33409a4f",
+                "label": "Details",
+                "name": "details",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "exhibition"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content"
+        ],
+        "active": 1,
+        "description": ""
+    },
+    {
         "key": "group_5941f70ddcd7e",
         "title": "FAQs",
         "fields": [
@@ -8,7 +406,6 @@
                 "label": "Answer",
                 "name": "answer",
                 "type": "wysiwyg",
-                "value": null,
                 "instructions": "",
                 "required": 1,
                 "conditional_logic": 0,
@@ -51,7 +448,6 @@
                 "label": "Main Menu Mode",
                 "name": "main_menu_mode",
                 "type": "select",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -79,7 +475,6 @@
                 "label": "Main Menu Style",
                 "name": "main_menu_style",
                 "type": "select",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -91,8 +486,7 @@
                 "choices": {
                     "standard": "Standard",
                     "collapsed": "Collapsed",
-                    "centered": "Centered",
-                    "independent": "Independent"
+                    "centered": "Centered"
                 },
                 "default_value": [
                     "standard"
@@ -109,7 +503,6 @@
                 "label": "Main Menu Button Color",
                 "name": "main_menu_button_color",
                 "type": "color_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -125,7 +518,6 @@
                 "label": "Main Menu Position",
                 "name": "main_menu_position",
                 "type": "select",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -153,7 +545,6 @@
                 "label": "Home Page Video YouTube ID",
                 "name": "home_page_video",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -173,7 +564,6 @@
                 "label": "Home Page Video Mute",
                 "name": "home_page_video_mute",
                 "type": "true_false",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -193,7 +583,6 @@
                 "label": "Site Heading",
                 "name": "site_heading",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -213,7 +602,6 @@
                 "label": "Phone Number",
                 "name": "phone_number",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -233,7 +621,6 @@
                 "label": "Address 1",
                 "name": "address_1",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -253,7 +640,6 @@
                 "label": "Address 2",
                 "name": "address_2",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -273,7 +659,6 @@
                 "label": "Facebook URL",
                 "name": "facebook_url",
                 "type": "url",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -290,7 +675,6 @@
                 "label": "Google Places ID",
                 "name": "google_places_id",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -310,7 +694,6 @@
                 "label": "Instagram URL",
                 "name": "instagram_url",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -330,7 +713,6 @@
                 "label": "Twitter Url",
                 "name": "twitter_url",
                 "type": "url",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -347,7 +729,6 @@
                 "label": "Google URL",
                 "name": "google_url",
                 "type": "url",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -364,7 +745,6 @@
                 "label": "YouTube URL",
                 "name": "youtube_url",
                 "type": "url",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -381,7 +761,6 @@
                 "label": "Yelp URL",
                 "name": "yelp_url",
                 "type": "url",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -398,7 +777,6 @@
                 "label": "Google Map",
                 "name": "google_map",
                 "type": "google_map",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -417,7 +795,6 @@
                 "label": "CTA Text",
                 "name": "cta_text",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -437,7 +814,6 @@
                 "label": "CTA Link",
                 "name": "cta_link",
                 "type": "url",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -454,7 +830,6 @@
                 "label": "Alternate CTA",
                 "name": "alternate_cta",
                 "type": "textarea",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -497,7 +872,6 @@
                 "label": "Nav Container",
                 "name": "nav_container",
                 "type": "select",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -525,7 +899,6 @@
                 "label": "Page Container",
                 "name": "page_container",
                 "type": "select",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -553,7 +926,6 @@
                 "label": "HTML Background Color",
                 "name": "html_background_color",
                 "type": "color_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -569,7 +941,6 @@
                 "label": "Site Highlight Color",
                 "name": "site_highlight_color",
                 "type": "color_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -585,7 +956,6 @@
                 "label": "Background Image",
                 "name": "site_bg",
                 "type": "image",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -610,7 +980,6 @@
                 "label": "Background Image Mode",
                 "name": "background_image_mode",
                 "type": "select",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -638,7 +1007,6 @@
                 "label": "Heading Site Bar Show",
                 "name": "heading_site_bar_show",
                 "type": "true_false",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -658,7 +1026,6 @@
                 "label": "Heading Site Bar",
                 "name": "heading_site_bar",
                 "type": "color_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -674,7 +1041,6 @@
                 "label": "Heading Site Bar Text",
                 "name": "heading_site_bar_text",
                 "type": "color_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -690,7 +1056,6 @@
                 "label": "Heading Site Bar Link",
                 "name": "heading_site_bar_link",
                 "type": "color_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -706,7 +1071,6 @@
                 "label": "Footer Site Bar Show",
                 "name": "footer_site_bar_show",
                 "type": "true_false",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -726,7 +1090,6 @@
                 "label": "Footer Site Bar",
                 "name": "footer_site_bar",
                 "type": "color_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -742,7 +1105,6 @@
                 "label": "Footer Site Bar Text",
                 "name": "footer_site_bar_text",
                 "type": "color_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -758,7 +1120,6 @@
                 "label": "Footer Site Bar Link",
                 "name": "footer_site_bar_link",
                 "type": "color_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -774,7 +1135,6 @@
                 "label": "Main Nav Background",
                 "name": "main_nav_background",
                 "type": "color_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -790,7 +1150,6 @@
                 "label": "Main Nav Shadow",
                 "name": "main_nav_background_shadow",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -810,7 +1169,6 @@
                 "label": "Main Nav Background Image",
                 "name": "main_nav_background_image",
                 "type": "image",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -835,7 +1193,6 @@
                 "label": "Main Nav Links",
                 "name": "main_nav_links",
                 "type": "color_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -851,7 +1208,6 @@
                 "label": "Body Overlay Mode",
                 "name": "body_overlay_mode",
                 "type": "select",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -879,7 +1235,6 @@
                 "label": "Body Overlay Color",
                 "name": "body_overlay_color",
                 "type": "color_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -895,7 +1250,6 @@
                 "label": "Body Overlay Color 2",
                 "name": "body_overlay_color_2",
                 "type": "color_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -919,7 +1273,6 @@
                 "label": "Body Overlay Opacity",
                 "name": "body_overlay_opacity",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -939,7 +1292,6 @@
                 "label": "Section Heading BG Color",
                 "name": "section_heading_bg",
                 "type": "color_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -978,7 +1330,6 @@
                 "label": "Org Name",
                 "name": "org_name",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -998,7 +1349,6 @@
                 "label": "Org URL",
                 "name": "org_url",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1018,7 +1368,6 @@
                 "label": "Org Desc",
                 "name": "org_desc",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1038,7 +1387,6 @@
                 "label": "Org Contact Num",
                 "name": "org_contact_num",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1058,7 +1406,6 @@
                 "label": "Org Contact Name",
                 "name": "org_contact_name",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1078,7 +1425,6 @@
                 "label": "Org Logo",
                 "name": "org_logo",
                 "type": "image",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1103,7 +1449,6 @@
                 "label": "Org Email",
                 "name": "org_email",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1123,7 +1468,6 @@
                 "label": "Per Name",
                 "name": "per_name",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1143,7 +1487,6 @@
                 "label": "Per From",
                 "name": "per_from",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1163,7 +1506,6 @@
                 "label": "Per Title",
                 "name": "per_title",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1183,7 +1525,6 @@
                 "label": "Event Name",
                 "name": "event_name",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1203,7 +1544,6 @@
                 "label": "Event Start Date",
                 "name": "event_start_date",
                 "type": "date_time_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1221,7 +1561,6 @@
                 "label": "Event End Date",
                 "name": "event_end_date",
                 "type": "date_time_picker",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1239,7 +1578,6 @@
                 "label": "Event Location Name",
                 "name": "event_location_name",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1259,7 +1597,6 @@
                 "label": "Event Address",
                 "name": "event_address",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1279,7 +1616,6 @@
                 "label": "Event City",
                 "name": "event_city",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1299,7 +1635,6 @@
                 "label": "Event Zip",
                 "name": "event_zip",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1319,7 +1654,6 @@
                 "label": "Event State",
                 "name": "event_state",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1339,7 +1673,6 @@
                 "label": "Event Image",
                 "name": "event_image",
                 "type": "image",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1364,7 +1697,6 @@
                 "label": "Event Description",
                 "name": "event_description",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1384,7 +1716,6 @@
                 "label": "Event Ticket Link",
                 "name": "event_ticket_link",
                 "type": "url",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1401,7 +1732,6 @@
                 "label": "Event Ticket Price",
                 "name": "event_ticket_price",
                 "type": "text",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1436,6 +1766,196 @@
         "description": ""
     },
     {
+        "key": "group_5a0513285c2e4",
+        "title": "Tickets",
+        "fields": [
+            {
+                "key": "field_5a05133392785",
+                "label": "Subtitle",
+                "name": "subtitle",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a096bbe79dad",
+                "label": "Color",
+                "name": "color",
+                "type": "color_picker",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": ""
+            },
+            {
+                "key": "field_5a05134f92786",
+                "label": "Age Label",
+                "name": "age_label",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a05135892787",
+                "label": "Age Detail",
+                "name": "age_detail",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a05136592788",
+                "label": "Price",
+                "name": "price",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a05137392789",
+                "label": "Price Expiration Date",
+                "name": "price_expiration_date",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a05138e9278a",
+                "label": "Details Link",
+                "name": "details_link",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a05139e9278b",
+                "label": "Ticket Terms & Conditions",
+                "name": "ticket_terms_conditions",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_5a20ea09886d4",
+                "label": "Buy Link",
+                "name": "buy_link",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "tickets"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
         "key": "group_59d2ec522a7db",
         "title": "Tracking & Analytics",
         "fields": [
@@ -1444,7 +1964,6 @@
                 "label": "GTM 1",
                 "name": "gtm_1",
                 "type": "textarea",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1464,7 +1983,6 @@
                 "label": "GTM 2",
                 "name": "gtm_2",
                 "type": "textarea",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1484,7 +2002,6 @@
                 "label": "GA",
                 "name": "ga",
                 "type": "textarea",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1519,6 +2036,122 @@
         "description": ""
     },
     {
+        "key": "group_5a0522f77eed8",
+        "title": "VIP Packs",
+        "fields": [
+            {
+                "key": "field_5a05230aa5586",
+                "label": "Subtitle",
+                "name": "subtitle",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a05231fa5587",
+                "label": "Color",
+                "name": "color",
+                "type": "color_picker",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": ""
+            },
+            {
+                "key": "field_5a05232da5588",
+                "label": "Buy Link",
+                "name": "buy_link",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a05233aa5589",
+                "label": "Features\/Benefits\/Ammenities",
+                "name": "features",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "row",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5a05238ba558a",
+                        "label": "Feature",
+                        "name": "feature",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "vip_packages"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
         "key": "group_593dc3d55ef8b",
         "title": "Content Sections",
         "fields": [
@@ -1527,7 +2160,6 @@
                 "label": "Content Sections",
                 "name": "content_sections",
                 "type": "flexible_content",
-                "value": null,
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1548,12 +2180,11 @@
                                 "label": "Section Slug",
                                 "name": "section_slug",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
                                 "wrapper": {
-                                    "width": "",
+                                    "width": "25",
                                     "class": "",
                                     "id": ""
                                 },
@@ -1568,12 +2199,11 @@
                                 "label": "Section Link Title",
                                 "name": "section_link_title",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
                                 "wrapper": {
-                                    "width": "",
+                                    "width": "25",
                                     "class": "",
                                     "id": ""
                                 },
@@ -1588,12 +2218,11 @@
                                 "label": "Section Heading",
                                 "name": "section_heading",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
                                 "wrapper": {
-                                    "width": "",
+                                    "width": "25",
                                     "class": "",
                                     "id": ""
                                 },
@@ -1608,12 +2237,11 @@
                                 "label": "Section Subheading",
                                 "name": "section_subheading",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
                                 "wrapper": {
-                                    "width": "",
+                                    "width": "25",
                                     "class": "",
                                     "id": ""
                                 },
@@ -1628,7 +2256,6 @@
                                 "label": "Section Content",
                                 "name": "section_content",
                                 "type": "wysiwyg",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -1641,19 +2268,33 @@
                                 "tabs": "all",
                                 "toolbar": "full",
                                 "media_upload": 1,
-                                "delay": 0
+                                "delay": 1
+                            },
+                            {
+                                "key": "field_5a04069e83d0b",
+                                "label": "Section Code",
+                                "name": "section_code",
+                                "type": "desmtech_editor",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "font_size": 14
                             },
                             {
                                 "key": "field_593ddab7ae5c8",
                                 "label": "Section Background Image",
                                 "name": "section_bg",
                                 "type": "image",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
                                 "wrapper": {
-                                    "width": "",
+                                    "width": "50",
                                     "class": "",
                                     "id": ""
                                 },
@@ -1673,12 +2314,11 @@
                                 "label": "Section Background Image Mode",
                                 "name": "section_bg_mode",
                                 "type": "select",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
                                 "wrapper": {
-                                    "width": "",
+                                    "width": "50",
                                     "class": "",
                                     "id": ""
                                 },
@@ -1702,12 +2342,11 @@
                                 "label": "Section Background Color",
                                 "name": "section_background_color",
                                 "type": "color_picker",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
                                 "wrapper": {
-                                    "width": "",
+                                    "width": "20",
                                     "class": "",
                                     "id": ""
                                 },
@@ -1718,7 +2357,6 @@
                                 "label": "Section Background Color 2",
                                 "name": "section_background_color_2",
                                 "type": "color_picker",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": [
@@ -1726,12 +2364,12 @@
                                         {
                                             "field": "field_599e3433212b1",
                                             "operator": "==",
-                                            "value": "gradient"
+                                            "value": "pattern"
                                         }
                                     ]
                                 ],
                                 "wrapper": {
-                                    "width": "",
+                                    "width": "20",
                                     "class": "",
                                     "id": ""
                                 },
@@ -1742,12 +2380,11 @@
                                 "label": "Section Heading Color",
                                 "name": "section_heading_color",
                                 "type": "color_picker",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
                                 "wrapper": {
-                                    "width": "",
+                                    "width": "20",
                                     "class": "",
                                     "id": ""
                                 },
@@ -1758,12 +2395,11 @@
                                 "label": "Section SubHeading Color",
                                 "name": "section_subheading_color",
                                 "type": "color_picker",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
                                 "wrapper": {
-                                    "width": "",
+                                    "width": "20",
                                     "class": "",
                                     "id": ""
                                 },
@@ -1774,12 +2410,11 @@
                                 "label": "Section Text Color",
                                 "name": "section_text_color",
                                 "type": "color_picker",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
                                 "wrapper": {
-                                    "width": "",
+                                    "width": "20",
                                     "class": "",
                                     "id": ""
                                 },
@@ -1790,7 +2425,6 @@
                                 "label": "section_header",
                                 "name": "section_header",
                                 "type": "textarea",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -1810,7 +2444,6 @@
                                 "label": "section_footer",
                                 "name": "section_footer",
                                 "type": "textarea",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -1840,7 +2473,6 @@
                                 "label": "Section Slug",
                                 "name": "section_slug",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -1860,7 +2492,6 @@
                                 "label": "Section Link Title",
                                 "name": "section_link_title",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -1880,7 +2511,6 @@
                                 "label": "Section Heading",
                                 "name": "section_heading",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -1900,7 +2530,6 @@
                                 "label": "Section Subheading",
                                 "name": "section_subheading",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -1920,7 +2549,6 @@
                                 "label": "Section Content",
                                 "name": "section_content",
                                 "type": "wysiwyg",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -1940,7 +2568,6 @@
                                 "label": "Event Highlights",
                                 "name": "event_highlights",
                                 "type": "repeater",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -1960,7 +2587,6 @@
                                         "label": "Title",
                                         "name": "title",
                                         "type": "text",
-                                        "value": null,
                                         "instructions": "",
                                         "required": 0,
                                         "conditional_logic": 0,
@@ -1980,7 +2606,6 @@
                                         "label": "Description",
                                         "name": "description",
                                         "type": "text",
-                                        "value": null,
                                         "instructions": "",
                                         "required": 0,
                                         "conditional_logic": 0,
@@ -2000,7 +2625,6 @@
                                         "label": "Link",
                                         "name": "link",
                                         "type": "url",
-                                        "value": null,
                                         "instructions": "",
                                         "required": 0,
                                         "conditional_logic": 0,
@@ -2017,7 +2641,6 @@
                                         "label": "Image",
                                         "name": "image",
                                         "type": "image",
-                                        "value": null,
                                         "instructions": "",
                                         "required": 0,
                                         "conditional_logic": 0,
@@ -2042,7 +2665,6 @@
                                         "label": "New Line",
                                         "name": "new_line",
                                         "type": "true_false",
-                                        "value": null,
                                         "instructions": "",
                                         "required": 0,
                                         "conditional_logic": 0,
@@ -2064,7 +2686,6 @@
                                 "label": "Section Background Image",
                                 "name": "section_bg",
                                 "type": "image",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2089,7 +2710,6 @@
                                 "label": "Section Background Image Mode",
                                 "name": "section_bg_mode",
                                 "type": "select",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2118,7 +2738,6 @@
                                 "label": "Section Background Color",
                                 "name": "section_background_color",
                                 "type": "color_picker",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2134,7 +2753,6 @@
                                 "label": "Section Heading Color",
                                 "name": "section_heading_color",
                                 "type": "color_picker",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2150,7 +2768,6 @@
                                 "label": "Section SubHeading Color",
                                 "name": "section_subheading_color",
                                 "type": "color_picker",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2166,7 +2783,6 @@
                                 "label": "Section Text Color",
                                 "name": "section_text_color",
                                 "type": "color_picker",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2182,7 +2798,6 @@
                                 "label": "Remove Bottom",
                                 "name": "remove_bottom",
                                 "type": "true_false",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2202,7 +2817,6 @@
                                 "label": "Section Image Size",
                                 "name": "section_image_sizes",
                                 "type": "radio",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2229,7 +2843,6 @@
                                 "label": "Image Section Highlight Padding",
                                 "name": "image_section_highlight_padding",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2249,7 +2862,6 @@
                                 "label": "Content Position",
                                 "name": "content_position",
                                 "type": "select",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2277,7 +2889,6 @@
                                 "label": "Show Link",
                                 "name": "show_link",
                                 "type": "true_false",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2307,7 +2918,6 @@
                                 "label": "Section Slug",
                                 "name": "section_slug",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2327,7 +2937,6 @@
                                 "label": "Section Link Title",
                                 "name": "section_link_title",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2347,7 +2956,6 @@
                                 "label": "Section Heading",
                                 "name": "section_heading",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2367,7 +2975,6 @@
                                 "label": "Section Subheading",
                                 "name": "section_subheading",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2387,7 +2994,6 @@
                                 "label": "Section Content",
                                 "name": "section_content",
                                 "type": "wysiwyg",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2407,7 +3013,6 @@
                                 "label": "Cards Width",
                                 "name": "cards_width",
                                 "type": "select",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2437,7 +3042,6 @@
                                 "label": "Cards Text Align",
                                 "name": "cards_text_align",
                                 "type": "select",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2466,7 +3070,6 @@
                                 "label": "Cards",
                                 "name": "section_cards",
                                 "type": "repeater",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2486,7 +3089,6 @@
                                         "label": "Title",
                                         "name": "title",
                                         "type": "text",
-                                        "value": null,
                                         "instructions": "",
                                         "required": 0,
                                         "conditional_logic": 0,
@@ -2506,7 +3108,6 @@
                                         "label": "Description",
                                         "name": "description",
                                         "type": "wysiwyg",
-                                        "value": null,
                                         "instructions": "",
                                         "required": 0,
                                         "conditional_logic": 0,
@@ -2526,7 +3127,6 @@
                                         "label": "Image",
                                         "name": "image",
                                         "type": "image",
-                                        "value": null,
                                         "instructions": "",
                                         "required": 0,
                                         "conditional_logic": 0,
@@ -2553,7 +3153,6 @@
                                 "label": "Section Background Image",
                                 "name": "section_bg",
                                 "type": "image",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2578,7 +3177,6 @@
                                 "label": "Section Background Image Mode",
                                 "name": "section_bg_mode",
                                 "type": "select",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2607,7 +3205,6 @@
                                 "label": "Section Background Color",
                                 "name": "section_background_color",
                                 "type": "color_picker",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2623,7 +3220,6 @@
                                 "label": "Section Heading Color",
                                 "name": "section_heading_color",
                                 "type": "color_picker",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2639,7 +3235,6 @@
                                 "label": "Section SubHeading Color",
                                 "name": "section_subheading_color",
                                 "type": "color_picker",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2655,7 +3250,6 @@
                                 "label": "Section Text Color",
                                 "name": "section_text_color",
                                 "type": "color_picker",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2671,7 +3265,6 @@
                                 "label": "Remove Bottom",
                                 "name": "remove_bottom",
                                 "type": "true_false",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2701,7 +3294,6 @@
                                 "label": "Slider Title",
                                 "name": "section_link_title",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2721,7 +3313,6 @@
                                 "label": "Slider Height",
                                 "name": "slider_height",
                                 "type": "number",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2743,7 +3334,6 @@
                                 "label": "Slider Gallery",
                                 "name": "slider_gallery",
                                 "type": "gallery",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2769,7 +3359,6 @@
                                 "label": "Slider Content",
                                 "name": "section_content",
                                 "type": "wysiwyg",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2799,7 +3388,6 @@
                                 "label": "Section Link Title",
                                 "name": "section_link_title",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2819,7 +3407,6 @@
                                 "label": "Section Heading",
                                 "name": "section_heading",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2839,7 +3426,6 @@
                                 "label": "Section Image",
                                 "name": "image",
                                 "type": "image",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2864,7 +3450,6 @@
                                 "label": "Section Background Color",
                                 "name": "section_background_color",
                                 "type": "color_picker",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2880,7 +3465,6 @@
                                 "label": "Image Width",
                                 "name": "image_width",
                                 "type": "select",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2906,7 +3490,6 @@
                                 "label": "Content Wrapper CSS Class",
                                 "name": "content_wrapper_css_class",
                                 "type": "text",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2936,7 +3519,6 @@
                                 "label": "Left Section",
                                 "name": "left_section",
                                 "type": "wysiwyg",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2956,7 +3538,6 @@
                                 "label": "Right Section",
                                 "name": "right_section",
                                 "type": "wysiwyg",
-                                "value": null,
                                 "instructions": "",
                                 "required": 0,
                                 "conditional_logic": 0,
@@ -2970,6 +3551,406 @@
                                 "toolbar": "full",
                                 "media_upload": 1,
                                 "delay": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5a0556682e4ad": {
+                        "key": "5a0556682e4ad",
+                        "name": "information_section",
+                        "label": "Information Section",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5a055cd2aeacd",
+                                "label": "Section Slug",
+                                "name": "section_slug",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "25",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_5a055cd2aeace",
+                                "label": "Section Link Title",
+                                "name": "section_link_title",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "25",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_5a055cd2aeacf",
+                                "label": "Section Heading",
+                                "name": "section_heading",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "25",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_5a055cd2aead0",
+                                "label": "Section Subheading",
+                                "name": "section_subheading",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "25",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_5a055cd2aead1",
+                                "label": "Section Content",
+                                "name": "section_content",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "all",
+                                "toolbar": "full",
+                                "media_upload": 1,
+                                "delay": 1
+                            },
+                            {
+                                "key": "field_5a055cd2aead2",
+                                "label": "Section Code",
+                                "name": "section_code",
+                                "type": "desmtech_editor",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "font_size": 14
+                            },
+                            {
+                                "key": "field_5a0556b52e4af",
+                                "label": "Information Category",
+                                "name": "information_category",
+                                "type": "flexible_content",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "100",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layouts": {
+                                    "5a0556b7edfb1": {
+                                        "key": "5a0556b7edfb1",
+                                        "name": "information_topic",
+                                        "label": "Information Topic",
+                                        "display": "block",
+                                        "sub_fields": [
+                                            {
+                                                "key": "field_5a05570c2e4b1",
+                                                "label": "Topic Name",
+                                                "name": "topic_name",
+                                                "type": "text",
+                                                "instructions": "",
+                                                "required": 0,
+                                                "conditional_logic": 0,
+                                                "wrapper": {
+                                                    "width": "",
+                                                    "class": "",
+                                                    "id": ""
+                                                },
+                                                "default_value": "",
+                                                "placeholder": "",
+                                                "prepend": "",
+                                                "append": "",
+                                                "maxlength": ""
+                                            },
+                                            {
+                                                "key": "field_5a0557ada8975",
+                                                "label": "Topic Items",
+                                                "name": "topic_items",
+                                                "type": "repeater",
+                                                "instructions": "",
+                                                "required": 0,
+                                                "conditional_logic": 0,
+                                                "wrapper": {
+                                                    "width": "",
+                                                    "class": "",
+                                                    "id": ""
+                                                },
+                                                "collapsed": "field_5a055811a8976",
+                                                "min": 0,
+                                                "max": 0,
+                                                "layout": "block",
+                                                "button_label": "Add Item",
+                                                "sub_fields": [
+                                                    {
+                                                        "key": "field_5a055811a8976",
+                                                        "label": "Item Title",
+                                                        "name": "item_title",
+                                                        "type": "text",
+                                                        "instructions": "",
+                                                        "required": 0,
+                                                        "conditional_logic": 0,
+                                                        "wrapper": {
+                                                            "width": "",
+                                                            "class": "",
+                                                            "id": ""
+                                                        },
+                                                        "default_value": "",
+                                                        "placeholder": "",
+                                                        "prepend": "",
+                                                        "append": "",
+                                                        "maxlength": ""
+                                                    },
+                                                    {
+                                                        "key": "field_5a055821a8977",
+                                                        "label": "Item Body",
+                                                        "name": "item_body",
+                                                        "type": "wysiwyg",
+                                                        "instructions": "",
+                                                        "required": 0,
+                                                        "conditional_logic": 0,
+                                                        "wrapper": {
+                                                            "width": "",
+                                                            "class": "",
+                                                            "id": ""
+                                                        },
+                                                        "default_value": "",
+                                                        "tabs": "all",
+                                                        "toolbar": "basic",
+                                                        "media_upload": 0,
+                                                        "delay": 1
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "min": "",
+                                        "max": ""
+                                    }
+                                },
+                                "button_label": "Add Row",
+                                "min": "",
+                                "max": ""
+                            },
+                            {
+                                "key": "field_5a055cd2aead3",
+                                "label": "Section Background Image",
+                                "name": "section_bg",
+                                "type": "image",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "preview_size": "thumbnail",
+                                "library": "all",
+                                "min_width": "",
+                                "min_height": "",
+                                "min_size": "",
+                                "max_width": "",
+                                "max_height": "",
+                                "max_size": "",
+                                "mime_types": ""
+                            },
+                            {
+                                "key": "field_5a055cd2aead4",
+                                "label": "Section Background Image Mode",
+                                "name": "section_bg_mode",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "50",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "pattern": "Pattern",
+                                    "image": "Image",
+                                    "cover": "Cover Image"
+                                },
+                                "default_value": [
+                                    "image"
+                                ],
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5a055cd2aead5",
+                                "label": "Section Background Color",
+                                "name": "section_background_color",
+                                "type": "color_picker",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "20",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": ""
+                            },
+                            {
+                                "key": "field_5a055cd2aead6",
+                                "label": "Section Background Color 2",
+                                "name": "section_background_color_2",
+                                "type": "color_picker",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5a055cd2aead4",
+                                            "operator": "==",
+                                            "value": "pattern"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "20",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": ""
+                            },
+                            {
+                                "key": "field_5a055cd2aead7",
+                                "label": "Section Heading Color",
+                                "name": "section_heading_color",
+                                "type": "color_picker",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "20",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": ""
+                            },
+                            {
+                                "key": "field_5a055cd2aead8",
+                                "label": "Section SubHeading Color",
+                                "name": "section_subheading_color",
+                                "type": "color_picker",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "20",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": ""
+                            },
+                            {
+                                "key": "field_5a055cd2aead9",
+                                "label": "Section Text Color",
+                                "name": "section_text_color",
+                                "type": "color_picker",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "20",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": ""
+                            },
+                            {
+                                "key": "field_5a055cd2aeada",
+                                "label": "section_header",
+                                "name": "section_header",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "rows": "",
+                                "new_lines": ""
+                            },
+                            {
+                                "key": "field_5a055cd2aeadb",
+                                "label": "section_footer",
+                                "name": "section_footer",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "rows": "",
+                                "new_lines": ""
                             }
                         ],
                         "min": "",
