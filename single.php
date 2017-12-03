@@ -13,7 +13,7 @@ if( get_field('page_container','option') ) {
 }
 ?>
 
-<div class="wrapper" id="single-wrapper">
+<div class="wrapper">
 
     <section class="header-section"></section>
 
@@ -36,11 +36,11 @@ if( get_field('page_container','option') ) {
 
                             <?php the_content(); ?>
 
-                            <div class="artist-gallery d-flex justify-content-center flex-wrap">
+                            <div class="post-gallery d-flex justify-content-center flex-wrap">
                                 <?php $gallery_items_images = get_field( 'gallery_items' ); ?>
                                 <?php if ( $gallery_items_images ) :  ?>
                                     <?php foreach ( $gallery_items_images as $gallery_items_image ): ?>
-                                        <div class="artist-gallery-wrapper">
+                                        <div class="post-gallery-wrapper">
                                             <a href="<?php echo $gallery_items_image['url']; ?>">
                                                 <img src="<?php echo $gallery_items_image['sizes']['thumbnail']; ?>" alt="<?php echo $gallery_items_image['alt']; ?>" />
                                             </a>
@@ -51,7 +51,7 @@ if( get_field('page_container','option') ) {
                             </div>
                             <script>
                                 jQuery(document).ready(function() {
-                                    jQuery('.artist-gallery a').simpleLightbox();
+                                    jQuery('.post-gallery a').simpleLightbox();
                                 });
                             </script>
 
@@ -66,8 +66,6 @@ if( get_field('page_container','option') ) {
         </main><!-- #main -->
 
     </div><!-- Container end -->
-
-    <?php include('content-sections-footer.php'); ?>
 
 </div><!-- Wrapper end -->
 

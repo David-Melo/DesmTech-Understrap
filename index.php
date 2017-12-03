@@ -25,7 +25,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
     <section class="header-section"></section>
 
-	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
+    <?php include('content-sections-blog.php'); ?>
 
         <main class="site-main" id="main">
 
@@ -54,6 +54,11 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
             <?php endif; ?>
 
         </main><!-- #main -->
+
+    </div><!-- Container end -->
+        <!-- The pagination component -->
+        <?php understrap_pagination(); ?>
+
 
     </div><!-- Container end -->
 

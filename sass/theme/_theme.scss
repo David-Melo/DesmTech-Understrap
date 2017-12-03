@@ -4,6 +4,14 @@ body {
   background: transparent;
 }
 
+.header-section {
+  padding-top: 100px;
+}
+
+.site > #page-wrapper > section:not(.header-section) {
+  padding: 0;
+}
+
 section {
   position: relative;
 }
@@ -38,14 +46,6 @@ section {
   padding: 0;
 }
 
-.site > #page-wrapper > section {
-  padding: 60px 0;
-}
-
-.site > #page-wrapper > section.header-section {
-  padding: 0;
-}
-
 
 .site section p {
   font-size: 22px;
@@ -75,13 +75,11 @@ h1, h2, h3 {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 25;
+  z-index: 199;
   background: #FFF;
 }
 
-.nav-section {
-  padding: 27px;
-}
+
 
 .logo-wrapper {
   left:0;
@@ -135,6 +133,11 @@ a.anchor {
   visibility: hidden;
 }
 
+.header-section {
+  margin-top: 100px;
+  height: 0;
+  padding: 0;
+}
 
 .highlight-image {
   display: inline-block;
@@ -179,7 +182,7 @@ section h2 {
 }
 
 #wrapper-footer section {
-  padding: 60px 0;
+  padding: 0px 0;
 }
 
 #wrapper-footer .social-section {
@@ -216,56 +219,6 @@ section h2 {
   margin-bottom: 0;
 }
 
-@media (max-width: 767px) {
-
-  body {
-    padding: 0;
-  }
-
-  .slider-section {
-    display: none;
-  }
-
-  p {
-    text-align: center;
-  }
-
-  #footer-bar {
-    position: relative;
-    height: auto;
-  }
-
-  #wrapper-footer section {
-    padding: 20px 0;
-  }
-
-  .nav-section-wrapper nav {
-    position: fixed !important;
-    top: 100px;
-    left: 0;
-    right: 0;
-    z-index: 16;
-  }
-
-  .logo-wrapper {
-    right: 0;
-    text-align: center;
-    display: block;
-    padding: 0px 0;
-  }
-
-  #content {
-    padding: 40px 25px;
-  }
-
-  .navbar-collapse {
-    max-height: 50vh;
-    overflow: auto;
-  }
-
-
-
-}
 
 #navbarNavDropdown .navbar-nav .nav-link {
   text-align: center;
@@ -282,75 +235,6 @@ section h2 {
   color: #FFF;
 }
 
-@media (min-width: 768px) {
-
-
-}
-
-@media (min-width: 500px) and (max-width: 768px){
-  .nav-section-wrapper {
-    top: 0px;
-  }
-  .text-xs-center {
-    text-align: center;
-  }
-  .site-bar {
-    height: 40px;
-    line-height: 24px;
-    padding: 5px 5px;
-  }
-  .text-sm-left{
-    display: inline-block;
-    float: left;
-  }
-  .text-sm-right {
-    display: inline-block;
-    float: right;
-  }
-  nav {
-    top: 100px;
-  }
-}
-
-@media (max-width: 500px){
-  .text-sm-left,
-  .text-sm-right {
-    text-align: center;
-  }
-}
-
-@media (min-width: 1024px) {
-  .nav-section .nav-link {
-    font-size: 20px;
-    line-height: 60px;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px){
-  .nav-section .nav-link {
-    font-size: 16px;
-  }
-  .nav-section-independent .nav-link {
-    line-height: 24px !important;
-  }
-}
-
-@media (min-width: 768px) {
-
-  .ticket-cta-wrapper {
-    padding: 14px 10px;
-  }
-  .nav-section-wrapper {
-  }
-  .nav-section {
-    padding: 0px;
-    /*position: absolute;*/
-    left: 0;
-    right: 0;
-    /*box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.18);*/
-  }
-}
-
 .nav-section.tablet {
   display: none;
 }
@@ -359,38 +243,6 @@ section h2 {
   line-height: 80px;
 }
 
-@media (max-width: 1321px) {
-
-}
-
-@media (min-width: 769px) and (max-width: 1321px){
-  .nav-section.desktop {
-    display: none;
-  }
-  .nav-section.tablet {
-    display: block;
-    background: #DDD;
-  }
-  .nav-section.tablet .nav-link {
-
-  }
-  .logo-wrapper img {
-    max-width: initial;
-  }
-  nav {
-    position: fixed!important;
-    top: 140px;
-    left: 0;
-    right: 0;
-    z-index: 16;
-  }
-  .nav-section .primary-menu {
-
-  }
-  .nav-section-nav .primary-menu {
-    display: none;
-  }
-}
 
 .nav-section-nav .primary-menu {
   padding: 20px 0;
@@ -403,12 +255,6 @@ section h2 {
   text-transform: uppercase;
   font-size: 17px;
   white-space: nowrap;
-}
-
-@media (min-width: 769px) and (max-width: 943px){
-  .nav-section.tablet .nav-link {
-    font-size: 15px;
-  }
 }
 
 .right-content-wrapper {
@@ -434,13 +280,17 @@ section h2 {
     top: -190px;
   }
 
-
+  .header-section {
+    margin-top: 100px;
+  }
 
 }
 
 @media (max-width: 739px) {
 
-
+  .header-section {
+    margin-top: 100px;
+  }
 
 }
 
@@ -576,3 +426,5 @@ section h2 {
   top: 100px;
   z-index: 10;
 }
+
+@import "mobile";

@@ -35,6 +35,15 @@ if( get_field('nav_container','option') ) {
 
 <?php the_field('gtm_2','option'); ?>
 
+<!--<div class="mobile-debug">
+    <div class="hidden-sm-up">XS</div>
+    <div class="hidden-xs-down hidden-md-up">SM</div>
+    <div class="hidden-sm-down hidden-lg-up">MD</div>
+    <div class="hidden-md-down hidden-xl-up">LG</div>
+    <div class="hidden-lg-down">XL</div>
+</div>-->
+
+
 <div class="body-overlay"></div>
 
 <header>

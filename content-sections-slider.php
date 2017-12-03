@@ -5,7 +5,7 @@
 <?php if ( get_sub_field('slider_height') ) : ?>
 <style>
     .section-<?= $sectionLinkSlug; ?> .carousel-item {
-        height:  <?php the_sub_field('slider_height'); ?>px !important;
+        /*height:  <?php the_sub_field('slider_height'); ?>px !important;*/
     }
 </style>
 <?php endif; ?>

@@ -9,6 +9,13 @@
 
 $the_theme = wp_get_theme();
 $container = get_theme_mod( 'understrap_container_type' );
+
+$page_container = 'container';
+
+if( get_field('page_container','option') ) {
+    $page_container = get_field('page_container','option') ;
+}
+
 ?>
 
 <?php get_sidebar( 'footerfull' ); ?>
@@ -21,6 +28,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 <footer class="site-footer" id="colophon">
 
 	<div class="wrapper" id="wrapper-footer">
+
+        <?php include('content-sections-footer.php'); ?>
 
 		<div class="container-fluid swarm-footer">
 
@@ -131,7 +140,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
             var $marker = $el.find('.marker');
             var $place = $marker.attr('data-place');
-            var zoom = parseInt($marker.attr('data-zoom')) || 18;
+            var zoom = parseInt($marker.attr('data-zoom')) || 14;
             var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
 
             var args = {
