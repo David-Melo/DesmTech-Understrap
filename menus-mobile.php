@@ -44,3 +44,22 @@
 <?php endif; ?>
 
 <!-- ------------------------------------------------------------------------ -->
+
+<?php if( get_field('main_menu_mode','option') == 'global' ): ?>
+
+    <!-- The WordPress Menu goes here -->
+    <?php wp_nav_menu(
+        array(
+            'theme_location'  => 'global',
+            'container_class' => 'collapse navbar-collapse',
+            'container_id'    => 'navbarNavDropdown',
+            'menu_class'      => 'navbar-nav',
+            'fallback_cb'     => '',
+            'menu_id'         => '',
+            'walker'          => new WP_Bootstrap_Navwalker(),
+        )
+    ); ?>
+
+<?php endif; ?>
+
+<!-- ------------------------------------------------------------------------ -->

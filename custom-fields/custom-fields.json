@@ -29,13 +29,105 @@
                 {
                     "param": "post_type",
                     "operator": "==",
-                    "value": "faq"
+                    "value": "faqs"
                 }
             ]
         ],
         "menu_order": 0,
         "position": "normal",
         "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5a005bf2c80ed",
+        "title": "Partners",
+        "fields": [
+            {
+                "key": "field_5a005bfbb2337",
+                "label": "Link or URL",
+                "name": "link_or_url",
+                "type": "text",
+                "value": null,
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "partners"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5a0e6b511e94b",
+        "title": "Post Gallery",
+        "fields": [
+            {
+                "key": "field_5a0e6b6aeb212",
+                "label": "Gallery Items",
+                "name": "gallery_items",
+                "type": "gallery",
+                "value": null,
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "min": "",
+                "max": "",
+                "insert": "append",
+                "library": "uploadedTo",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": "",
@@ -62,7 +154,8 @@
                 },
                 "choices": {
                     "primary": "WP Primary",
-                    "content": "Content Sections"
+                    "content": "Content Sections",
+                    "global": "Global (Home Sections + WPPrimary)"
                 },
                 "default_value": [
                     "primary"
@@ -92,7 +185,9 @@
                     "standard": "Standard",
                     "collapsed": "Collapsed",
                     "centered": "Centered",
-                    "independent": "Independent"
+                    "independent": "Independent",
+                    "minimal": "Minimal",
+                    "minimal-logo": "Minimal & Logo"
                 },
                 "default_value": [
                     "standard"
@@ -103,6 +198,26 @@
                 "ajax": 0,
                 "return_format": "value",
                 "placeholder": ""
+            },
+            {
+                "key": "field_5a0063107acdb",
+                "label": "Show Logo",
+                "name": "show_logo",
+                "type": "true_false",
+                "value": null,
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 1,
+                "ui_on_text": "",
+                "ui_off_text": ""
             },
             {
                 "key": "field_59adfd8ea207a",
@@ -286,26 +401,6 @@
                 "placeholder": ""
             },
             {
-                "key": "field_598268b67def7",
-                "label": "Google Places ID",
-                "name": "google_places_id",
-                "type": "text",
-                "value": null,
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
                 "key": "field_598268707def4",
                 "label": "Instagram URL",
                 "name": "instagram_url",
@@ -392,6 +487,46 @@
                 },
                 "default_value": "",
                 "placeholder": ""
+            },
+            {
+                "key": "field_5a006192c33f9",
+                "label": "Map Title",
+                "name": "map_title",
+                "type": "text",
+                "value": null,
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_598268b67def7",
+                "label": "Google Places ID",
+                "name": "google_places_id",
+                "type": "text",
+                "value": null,
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
                 "key": "field_5983ea06fe10c",
@@ -957,6 +1092,49 @@
                     "param": "options_page",
                     "operator": "==",
                     "value": "site-color-settings"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5a005c3664564",
+        "title": "Sponsors",
+        "fields": [
+            {
+                "key": "field_5a005c41dfc68",
+                "label": "Link or URL",
+                "name": "link_or_url",
+                "type": "text",
+                "value": null,
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "sponsorships"
                 }
             ]
         ],

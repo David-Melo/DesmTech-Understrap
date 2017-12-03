@@ -85,6 +85,8 @@ register_nav_menus( array(
     'secondary' => 'Secondary Menu',
     'footer' => 'Footer Menu',
     'mobile' => 'Mobile Menu',
+    'mobile' => 'Mobile Menu',
+    'global' => 'Global Menu',
 ) );
 
 if( function_exists('acf_add_options_page') ) {

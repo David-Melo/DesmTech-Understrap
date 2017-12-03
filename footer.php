@@ -16,12 +16,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #page -->
 
+
+
 <footer class="site-footer" id="colophon">
 
-
 	<div class="wrapper" id="wrapper-footer">
-
-		<?php include('content-sections-footer.php'); ?>
 
 		<div class="container-fluid swarm-footer">
 
@@ -43,7 +42,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 			</div>
 
-			<div class="text-center px-5 mx-5"><small>Please contact us for any inquiries, sponsorships, or volunteer opportunities.</small></div>
+			<div class="text-center"><small>Please contact us for any inquiries, sponsorships, or volunteer opportunities.</small></div>
 
 		</div>
 
@@ -132,7 +131,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
             var $marker = $el.find('.marker');
             var $place = $marker.attr('data-place');
-            var zoom = parseInt($marker.attr('data-zoom')) || 14;
+            var zoom = parseInt($marker.attr('data-zoom')) || 18;
             var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
 
             var args = {
