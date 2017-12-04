@@ -144,7 +144,7 @@ color: <?= get_field('main_nav_links','option') ?>;
 
 <?php if( get_field('site_highlight_color','option') != 'transparent' ): ?>
 
-.nav-section .active .nav-link, #page-wrapper a {
+.nav-section .active .nav-link, #page-wrapper a:not(.btn) {
     color: <?= get_field('site_highlight_color','option') ?>;
 }
 

@@ -2,7 +2,7 @@
 
 body {
   background: transparent;
-  font-family: "Gotham", sans-serif;
+  font-family: "Gotham Thin", sans-serif;
 }
 
 .header-section {
@@ -10,7 +10,19 @@ body {
 }
 
 .site > #page-wrapper > section:not(.header-section) {
-  padding: 0;
+  padding: 40px 0;
+}
+
+.background-white {
+  background-color: #FFFFFF;
+}
+
+.background-black {
+  background-color: #000000;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
 }
 
 section {
@@ -78,6 +90,7 @@ h1, h2, h3 {
   left: 0;
   z-index: 199;
   background: #FFF;
+  padding: 20px;
 }
 
 
@@ -271,38 +284,6 @@ section h2 {
   display: none;
 }
 
-@media (max-width: 988px) {
-
-  .right-content {
-    padding: 40px 0;
-  }
-
-  a.anchor {
-    top: -190px;
-  }
-
-  .header-section {
-    margin-top: 100px;
-  }
-
-}
-
-@media (max-width: 739px) {
-
-  .header-section {
-    margin-top: 100px;
-  }
-
-}
-
-@media (min-width: 770px) and (max-width: 988px) {
-
-  .right-content {
-    padding: 40px 0;
-  }
-
-
-}
 
 .btn-lg {
   padding: .65rem 1.5rem;
@@ -310,7 +291,7 @@ section h2 {
 
 .navbar-toggleable-lg {
   min-height: 60px;
-  top: 110px;
+  top: 100px;
   position: fixed;
   z-index: 50;
   left: 0;
@@ -376,11 +357,10 @@ section h2 {
 
 .side-bar-toggle {
   display: inline-block;
-  height: 100px;
   font-size: 45px;
   font-weight: 900;
-  line-height: 100px;
   padding-left: 15px;
+  line-height: 60px;
 }
 
 .swarm-footer {
@@ -395,8 +375,7 @@ section h2 {
 }
 
 .menu-container a.side-bar-toggle {
-  color: #FFF;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.66);
+  color: #000000;
 }
 .menu-container a.side-bar-toggle:hover {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.66);
@@ -426,6 +405,14 @@ section h2 {
   position: fixed;
   top: 100px;
   z-index: 10;
+}
+
+.collapse.show .nav-link .menu-link {
+  padding-left: 0 !important;
+}
+
+.btn-xl {
+  font-size: 35px;
 }
 
 @import "mobile";

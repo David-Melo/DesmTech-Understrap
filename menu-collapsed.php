@@ -1,33 +1,25 @@
 <div class="nav-items-wrapper">
 
-    <div class="row no-gutters">
+    <div class="d-flex justify-content-between">
 
-        <div class="col-sm d-flex">
-
-            <div class="nav-section-logo d-flex align-self-center">
-                <?php include("logo.php"); ?>
-            </div>
-
+        <div class="nav-section-logo d-flex align-self-center">
+            <?php include("logo.php"); ?>
         </div>
 
-        <div class="col-sm d-flex justify-content-end">
-
-            <?php if ( get_field('alternate_cta','option') ): ?>
-                <div class="nav-section-cta float-right ml-3 clearfix">
-                    <?php the_field('alternate_cta','option'); ?>
-                </div>
-            <?php endif; ?>
-
-            <?php if ( get_field('cta_link','option') ): ?>
+        <?php if ( get_field('alternate_cta','option') ): ?>
             <div class="nav-section-cta d-flex align-self-center">
-                <?php include("cta.php"); ?>
+                <?php the_field('alternate_cta','option'); ?>
             </div>
-            <?php endif; ?>
+        <?php endif; ?>
 
-            <div class="nav-section-nav">
-                <?php include("menus.php"); ?>
-            </div>
+        <?php if ( get_field('cta_link','option') ): ?>
+        <div class="nav-section-cta d-flex align-self-stretch">
+            <?php include("cta.php"); ?>
+        </div>
+        <?php endif; ?>
 
+        <div class="nav-section-nav">
+            <?php include("menus.php"); ?>
         </div>
 
     </div>

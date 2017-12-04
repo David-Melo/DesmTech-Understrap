@@ -1,6 +1,6 @@
 <nav class="navbar navbar-toggleable-lg navbar-inverse bg-inverse hidden-md-up">
 
-    <div class="nav-section-wrapper">
+    <div class="nav-section-wrapper d-flex justify-content-center">
 
         <div class="logo-wrapper">
 
@@ -22,7 +22,7 @@
     <div class="d-flex justify-content-between">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="fa fa-navicon"></i>
         </button>
 
         <?php if ( get_field('alternate_cta','option') ): ?>

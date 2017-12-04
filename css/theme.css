@@ -9308,13 +9308,22 @@ h1.navbar-brand a:hover {
 
 body {
   background: transparent;
-  font-family: "Gotham", sans-serif; }
+  font-family: "Gotham Thin", sans-serif; }
 
 .header-section {
   padding-top: 100px; }
 
 .site > #page-wrapper > section:not(.header-section) {
-  padding: 0; }
+  padding: 40px 0; }
+
+.background-white {
+  background-color: #FFFFFF; }
+
+.background-black {
+  background-color: #000000; }
+
+p:last-of-type {
+  margin-bottom: 0; }
 
 section {
   position: relative; }
@@ -9362,7 +9371,8 @@ h1, h2, h3 {
   right: 0;
   left: 0;
   z-index: 199;
-  background: #FFF; }
+  background: #FFF;
+  padding: 20px; }
 
 .logo-wrapper {
   left: 0;
@@ -9513,28 +9523,12 @@ section h2 {
 .header-content-section .alt-container {
   display: none; }
 
-@media (max-width: 988px) {
-  .right-content {
-    padding: 40px 0; }
-  a.anchor {
-    top: -190px; }
-  .header-section {
-    margin-top: 100px; } }
-
-@media (max-width: 739px) {
-  .header-section {
-    margin-top: 100px; } }
-
-@media (min-width: 770px) and (max-width: 988px) {
-  .right-content {
-    padding: 40px 0; } }
-
 .btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit] {
   padding: .65rem 1.5rem; }
 
 .navbar-toggleable-lg {
   min-height: 60px;
-  top: 110px;
+  top: 100px;
   position: fixed;
   z-index: 50;
   left: 0;
@@ -9597,11 +9591,10 @@ section h2 {
 
 .side-bar-toggle {
   display: inline-block;
-  height: 100px;
   font-size: 45px;
   font-weight: 900;
-  line-height: 100px;
-  padding-left: 15px; }
+  padding-left: 15px;
+  line-height: 60px; }
 
 .swarm-footer {
   background: #000;
@@ -9613,8 +9606,7 @@ section h2 {
   padding: 0 15px; }
 
 .menu-container a.side-bar-toggle {
-  color: #FFF;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.66); }
+  color: #000000; }
 
 .menu-container a.side-bar-toggle:hover {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.66);
@@ -9641,6 +9633,12 @@ section h2 {
   top: 100px;
   z-index: 10; }
 
+.collapse.show .nav-link .menu-link {
+  padding-left: 0 !important; }
+
+.btn-xl {
+  font-size: 35px; }
+
 .mobile-debug {
   position: fixed;
   z-index: 99999999999999999999999999999;
@@ -9659,9 +9657,6 @@ section h2 {
 /* ---------------------------------------- */
 /* ---------------------------------------- */
 /* ---------------------------------------- */
-.bg-inverse {
-  background-color: #148fbf !important; }
-
 .navbar-toggler {
   border: 2px solid white;
   border-radius: 0;
@@ -9670,108 +9665,16 @@ section h2 {
   width: 52px;
   font-size: 28px; }
 
-@media (max-width: 1355px) {
-  .nav-section-wrapper #menu-primary-1 > li > a {
-    margin: 15px 7px 0;
-    font-size: 14px; } }
-
-@media (max-width: 1186px) {
-  .header-section {
-    padding-top: 154px; }
-  .nav-section-nav {
-    display: none; }
-  .nav-section.tablet {
-    display: block;
-    z-index: 15;
-    position: fixed;
-    left: 0;
-    right: 0; }
-  .nav-section .active .nav-link {
-    color: #e3bd39 !important; }
-  .nav-section.tablet {
-    border-bottom: 0;
-    top: 100px; }
-  .nav-section-wrapper {
-    box-shadow: none; }
-  .nav-section .nav-link {
-    font-weight: 700;
-    font-size: 14px;
-    color: #FFF;
-    line-height: 40px; } }
-
-@media (max-width: 970px) {
-  section {
-    border-bottom: 15px solid #fff; }
-  .nav-section.tablet {
-    display: block;
-    z-index: 15;
-    position: fixed;
-    left: 0;
-    right: 0; } }
-
-@media (max-width: 940px) {
-  #navbarNavDropdown ul.dropdown-menu {
-    position: relative; }
-  #navbarNavDropdown ul.dropdown-menu > li {
-    position: relative;
-    float: none; }
-  .navbar-toggleable-lg .navbar-nav .dropdown-menu {
-    position: absolute; }
-  .header-section {
-    padding-top: 160px; }
-  .nav-section.tablet .nav-section .nav-link {
-    font-size: 12px; }
-  .section- .carousel-item {
-    height: 550px; }
-  .mobile-menu-nav {
-    display: block;
-    top: 100px;
-    z-index: 15;
-    position: fixed;
-    left: 0;
-    right: 0;
-    padding: 0 10px; }
-  .tablet-menu-nav {
-    display: none; } }
-
 @media (max-width: 760px) {
-  .nav-section.tablet {
-    display: none; }
-  .cgaf-logo img {
-    height: 100px;
-    padding: 20px 0;
-    margin-right: 10px; }
-  .spacer {
-    display: none; }
-  .button-item {
-    width: 100%;
-    margin-bottom: 10px; }
-  .email-newsletter input {
-    border-right: 2px solid #fff; }
-  .ticket {
-    width: 100% !important; } }
+  .header-section {
+    margin-top: 166px; }
+  .btn-xl {
+    font-size: 6vw; } }
 
 @media (max-width: 450px) {
-  .h1 {
-    font-size: 10vw; }
-  .h2 {
-    font-size: 8vw; }
-  .site section p {
-    font-size: 5vw;
-    font-family: "Gotham Thin"; }
-  .vip-pack .card-header {
-    font-size: 8vw; }
-  .vip-pack .h3 {
-    font-size: 5vw; }
-  .social-footer .h3 {
-    font-size: 7vw; } }
-
-.navbar-collapse > ul > li .nav-link {
-  line-height: 30px; }
-
-#navbarNavDropdown {
-  overflow: scroll;
-  height: 66vh; }
+  .btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit] {
+    padding: 15px 20px;
+    font-size: 15px; } }
 
 /*
 * Use existing Bootstrap 4 classes and

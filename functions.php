@@ -85,7 +85,6 @@ register_nav_menus( array(
     'secondary' => 'Secondary Menu',
     'footer' => 'Footer Menu',
     'mobile' => 'Mobile Menu',
-    'mobile' => 'Mobile Menu',
     'global' => 'Global Menu',
 ) );
 
@@ -182,5 +181,7 @@ function custom_excerpt_length( $length ) {
     return 280;
 }
 add_filter( ‘excerpt_length’, ‘custom_excerpt_length’, 999 );
+
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 
 include("shortcodes/index.php");

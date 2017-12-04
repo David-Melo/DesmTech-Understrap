@@ -1,7 +1,14 @@
 <div class="logo-wrapper align-self-center">
 
-    <a href="http://www.terragroup.com/" target="_blank">
-        <img src="/wp-content/uploads/2017/12/terra-logo-final-fixed.png" title="Coconut Grove Art Festival - Presented By Terra" alt="Coconut Grove Art Festival - Presented By Terra">
+    <?php
+
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+
+    ?>
+
+    <a href="/" title="Home">
+        <img src="<?php echo $logo[0]; ?>" title="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>" alt="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
     </a>
 
 </div>
