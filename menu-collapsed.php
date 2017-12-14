@@ -13,7 +13,7 @@
         <?php endif; ?>
 
         <?php if ( get_field('cta_link','option') ): ?>
-        <div class="nav-section-cta d-flex align-self-stretch">
+        <div class="nav-section-cta d-flex align-self-center">
             <?php include("cta.php"); ?>
         </div>
         <?php endif; ?>
