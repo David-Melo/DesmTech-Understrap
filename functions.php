@@ -184,4 +184,30 @@ add_filter( ‘excerpt_length’, ‘custom_excerpt_length’, 999 );
 
 add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 
+function load_contactform7_on_specific_page(){
+    wp_dequeue_style('contact-form-7');  // Dequeue CSS file.
+}
+add_action( 'wp_enqueue_scripts', 'load_contactform7_on_specific_page' );
+add_filter('wpcf7_form_elements', function( $content ) {
+    $dom = new DOMDocument();
+    $dom->preserveWhiteSpace = false;
+
+    $content = htmlspecialchars_decode(utf8_decode(htmlentities($content, ENT_COMPAT, 'utf-8', false)));
+
+    libxml_use_internal_errors(true);
+
+    $dom->loadHTML($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+
+    $xpath = new DomXPath($dom);
+    $spans = $xpath->query("//span[contains(@class, 'wpcf7-form-control-wrap')]" );
+
+    foreach ( $spans as $span ) :
+        $children = $span->firstChild;
+        //$span->parentNode->replaceChild( $children, $span );
+    endforeach;
+
+    return $dom->saveHTML();
+});
+
+
 include("shortcodes/index.php");

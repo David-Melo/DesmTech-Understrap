@@ -132,6 +132,8 @@ if( get_field('page_container','option') ) {
 	}
 
 </style>
+
+<?php if ( the_field('google_map','option') ) : ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu3cp_xWqPVHIbfz12SJ-_hJ3RW75wj7A&libraries=places"></script>
 <script type="text/javascript">
     (function($) {
@@ -212,62 +214,74 @@ if( get_field('page_container','option') ) {
         });
 
     })(jQuery);
+</script>
+<?php endif; ?>
 
-    jQuery(document).on('click','.navbar-collapse.show',function(e) {
-        if( jQuery(e.target).is('a') ) {
-            jQuery(this).collapse('hide');
-        }
-    });
+<script type="text/javascript">
 
-    jQuery(document).ready(function(){
-        // Cache selectors
-        var lastId,
-            topMenu = jQuery(".nav-section-wrapper"),
-            topMenuHeight = 0,
-            // All list items
-            menuItems = jQuery('.nav-section-wrapper .nav').find("a"),
-            // Anchors corresponding to menu items
-            scrollItems = menuItems.map(function(){
-                var item = jQuery(jQuery(this).attr("href"));
-                if (item.length) { return item; }
-            });
+    (function($) {
 
-		// Bind click handler to menu items
-		// so we can get a fancy scroll animation
-        menuItems.click(function(e){
-
-            var href = jQuery(this).attr("href"),
-                offsetTop = href === "#" ? 0 : jQuery(href).offset().top-topMenuHeight+1;
-            console.log(offsetTop);
-            jQuery('html, body').stop().animate({
-                scrollTop: offsetTop+20
-            }, 300);
-            e.preventDefault();
-        });
-
-		// Bind to scroll
-        jQuery(window).scroll(function(){
-            // Get container scroll position
-            var fromTop = jQuery(this).scrollTop()+topMenuHeight;
-
-            // Get id of current scroll item
-            var cur = scrollItems.map(function(){
-                if (jQuery(this).offset().top < fromTop)
-                    return this;
-            });
-            // Get the id of the current element
-            cur = cur[cur.length-1];
-            var id = cur && cur.length ? cur[0].id : "";
-
-            if (lastId !== id) {
-                lastId = id;
-                // Set/remove active class
-                menuItems
-                    .parent().removeClass("active")
-                    .end().filter("[href='#"+id+"']").parent().addClass("active");
+        jQuery(document).on('click','.navbar-collapse.show',function(e) {
+            if( jQuery(e.target).is('a') ) {
+                jQuery(this).collapse('hide');
             }
         });
-	});
+
+        <?php if( get_field('main_menu_mode','option') == 'content' ): ?>
+
+            jQuery(document).ready(function(){
+                // Cache selectors
+                var lastId,
+                    topMenu = jQuery(".nav-section-wrapper"),
+                    topMenuHeight = 0,
+                    // All list items
+                    menuItems = jQuery('.nav-section-wrapper .nav').find("a"),
+                    // Anchors corresponding to menu items
+                    scrollItems = menuItems.map(function(){
+                        var item = jQuery(jQuery(this).attr("href"));
+                        if (item.length) { return item; }
+                    });
+
+                // Bind click handler to menu items
+                // so we can get a fancy scroll animation
+                menuItems.click(function(e){
+
+                    var href = jQuery(this).attr("href"),
+                        offsetTop = href === "#" ? 0 : jQuery(href).offset().top-topMenuHeight+1;
+                    console.log(offsetTop);
+                    jQuery('html, body').stop().animate({
+                        scrollTop: offsetTop+20
+                    }, 300);
+                    e.preventDefault();
+                });
+
+                // Bind to scroll
+                jQuery(window).scroll(function(){
+                    // Get container scroll position
+                    var fromTop = jQuery(this).scrollTop()+topMenuHeight;
+
+                    // Get id of current scroll item
+                    var cur = scrollItems.map(function(){
+                        if (jQuery(this).offset().top < fromTop)
+                            return this;
+                    });
+                    // Get the id of the current element
+                    cur = cur[cur.length-1];
+                    var id = cur && cur.length ? cur[0].id : "";
+
+                    if (lastId !== id) {
+                        lastId = id;
+                        // Set/remove active class
+                        menuItems
+                            .parent().removeClass("active")
+                            .end().filter("[href='#"+id+"']").parent().addClass("active");
+                    }
+                });
+            });
+
+        <?php endif; ?>
+
+    })(jQuery);
 
 </script>
 

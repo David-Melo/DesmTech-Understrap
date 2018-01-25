@@ -161,6 +161,15 @@ color: <?= get_field('site_highlight_color','option') ?> !important;
 border-color: <?/*= get_field('site_highlight_color','option') */?> !important;-->
 }
 
+    .menu-toggle i {
+        color: <?= get_field('site_highlight_color','option') ?>;
+        line-height: 60px;
+        font-size: 35px;
+    }
+    .menu-toggle:hover i {
+        color: #FFFFFF;
+    }
+
 <?php endif; ?>
 
 /* -------------------------------------------------------------------------- */
@@ -320,8 +329,8 @@ background-color: <?= get_field('section_heading_bg','option') ?>;
 .menu-container a.side-bar-toggle  .navbar-toggler-icon{
     color: <?= get_field('main_menu_button_color','option') ?>;
 }
-.menu-container a.side-bar-toggle:hover .navbar-toggler-icon {
-    color: <?= get_field('site_highlight_color','option') ?>;
+.menu-container a.side-bar-toggle:hover .navbar-toggler-icon, .menu-toggle i {
+    color: <?= get_field('site_highlight_color','option') ?> !important;
 }
 
 <?php endif; ?>

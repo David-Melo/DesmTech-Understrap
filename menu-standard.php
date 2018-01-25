@@ -2,24 +2,24 @@
 
     <div class="d-flex justify-content-between">
 
-        <?php if ( get_field('alternate_cta','option') ): ?>
-            <div class="nav-section-cta d-flex align-self-center">
+        <div class="nav-section-logo">
+            <?php include("logo.php"); ?>
+        </div>
+
+        <!--<?php if ( get_field('alternate_cta','option') ): ?>
+            <div class="nav-section-cta">
                 <?php the_field('alternate_cta','option'); ?>
             </div>
         <?php endif; ?>
 
         <?php if ( get_field('cta_link','option') ): ?>
-            <div class="nav-section-cta d-flex align-self-center">
+            <div class="nav-section-cta">
                 <?php include("cta.php"); ?>
             </div>
-        <?php endif; ?>
+        <?php endif; ?>-->
 
         <div class="nav-section-nav">
             <?php include("menus.php"); ?>
-        </div>
-
-        <div class="nav-section-logo d-flex align-self-center">
-            <?php include("logo.php"); ?>
         </div>
 
     </div>
