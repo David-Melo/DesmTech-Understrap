@@ -21,14 +21,14 @@
                             <div class="section-headings">
 
                                 <?php if ( get_sub_field('section_heading') ) : ?>
-                                    <h2 class="text-center" style="<?=$headingStyle;?>"><span><?php the_sub_field('section_heading'); ?></span></h2>
+                                    <h2 class="text-center" style="<?=$headingStyle;?>"><span><?php the_sub_field('section_heading'); ?></span>
                                 <?php endif; ?>
 
                                 <?php if ( get_sub_field('section_subheading') ) : ?>
                                     <h4 class="text-center" style="<?=$subHeadingStyle;?>"><?php the_sub_field('section_subheading'); ?></h4>
                                 <?php endif; ?>
 
-                            </div>
+
 
                         <?php endif; ?>
 
@@ -55,6 +55,7 @@
                 <?php the_sub_field('section_footer'); ?>
 
             <?php include("content-sections-slider.php"); ?>
+            <?php include("content-sections-slick-slider.php"); ?>
 
         </section>
 

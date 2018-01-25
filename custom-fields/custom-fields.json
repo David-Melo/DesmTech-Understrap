@@ -603,6 +603,25 @@
                 "maxlength": "",
                 "rows": "",
                 "new_lines": ""
+            },
+            {
+                "key": "field_5a695b00ba26f",
+                "label": "Load Slick Slider",
+                "name": "load_slick_slider",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "",
+                "ui_off_text": ""
             }
         ],
         "location": [
@@ -1060,11 +1079,60 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": "25",
                     "class": "",
                     "id": ""
                 },
                 "default_value": "transparent"
+            },
+            {
+                "key": "field_5a695cad67da2",
+                "label": "Footer BG Color",
+                "name": "footer_bg_color",
+                "type": "color_picker",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": ""
+            },
+            {
+                "key": "field_5a695d3d67da3",
+                "label": "Footer Link Color",
+                "name": "footer_link_color",
+                "type": "color_picker",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": ""
+            },
+            {
+                "key": "field_5a695dab67da4",
+                "label": "Footer Text Color",
+                "name": "footer_text_color",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             }
         ],
         "location": [
@@ -2743,6 +2811,15 @@
                     },
                     "59421014b9165": {
                         "key": "59421014b9165",
+                        "name": "slick_slider_section",
+                        "label": "Slick Slider Section",
+                        "display": "block",
+                        "sub_fields": [],
+                        "min": "",
+                        "max": ""
+                    },
+                    "59eeab1b6cfe2": {
+                        "key": "59eeab1b6cfe2",
                         "name": "slider_section",
                         "label": "Slider Section",
                         "display": "block",

@@ -27,7 +27,12 @@ if( get_field('nav_container','option') ) {
 		<?php include('styles.php'); ?>
 	</style>
 
-    <link rel='stylesheet' href='<?= get_template_directory_uri() . '/css/fonts/gotham-stylesheet.css' ;?>' type='text/css' media='all' />
+    <link rel='stylesheet' href='<?= get_template_directory_uri() . '/css/fonts/gatlinbold/stylesheet.css' ;?>' type='text/css' media='all' />
+
+    <?php if ( get_field( 'load_slick_slider', 'option' ) == 1 ) : ;?>
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+    <?php endif; ?>
 
 </head>
 

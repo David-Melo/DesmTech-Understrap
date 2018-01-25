@@ -31,7 +31,7 @@ if( get_field('page_container','option') ) {
 
         <?php include('content-sections-footer.php'); ?>
 
-		<div class="container-fluid swarm-footer">
+		<div class="container-fluid swarm-footer footer_bg_color footer_text_color footer_link_color">
 
 			<div class="row mb-2">
 				<div class="col-md-4 text-md-left text-sm-center mb-sm-4">
@@ -47,7 +47,7 @@ if( get_field('page_container','option') ) {
 					<div><strong>SWARM Event Agency</strong></div>
 					<div><strong>305.461.2700</strong></div>
 					<div><strong>2308 NW 5 Ave</strong></div>
-					<div class="mb-4"><strong>Wywnood, FL 33127</strong></div>
+					<div class="mb-4"><strong>Wynwood, FL 33127</strong></div>
 				</div>
 			</div>
 
@@ -133,7 +133,7 @@ if( get_field('page_container','option') ) {
 
 </style>
 
-<?php if ( the_field('google_map','option') ) : ?>
+<?php if ( get_field('google_map','option') ) : ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu3cp_xWqPVHIbfz12SJ-_hJ3RW75wj7A&libraries=places"></script>
 <script type="text/javascript">
     (function($) {
@@ -284,6 +284,11 @@ if( get_field('page_container','option') ) {
     })(jQuery);
 
 </script>
+
+<?php if ( get_field( 'load_slick_slider', 'option' ) == 1 ) : ;?>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<?php endif; ?>
+
 
 <?php include("structured_data.php") ;?>
 

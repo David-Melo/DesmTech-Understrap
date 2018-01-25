@@ -85,7 +85,7 @@ if( get_field('page_container','option') ) {
 
 ?>
 
-<?php if ( the_field('google_map','option') ) : ?>
+<?php if ( get_field('google_map','option') ) : ?>
 <div class="acf-map">
     <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-place="<?php echo $place; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
 </div>

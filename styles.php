@@ -19,7 +19,7 @@ body {
 }
 }
 .header-section {
-    margin-top: 132px;
+    margin-top: 100px;
 }
 <?php endif; ?>
 
@@ -144,6 +144,11 @@ color: <?= get_field('main_nav_links','option') ?>;
 
 <?php if( get_field('site_highlight_color','option') != 'transparent' ): ?>
 
+a {
+    color: <?= get_field('site_highlight_color','option') ?>;
+    font-weight: 900;
+}
+
 .nav-section .active .nav-link, #page-wrapper a:not(.btn) {
     color: <?= get_field('site_highlight_color','option') ?>;
 }
@@ -157,8 +162,8 @@ color: <?= get_field('site_highlight_color','option') ?> !important;
 }
 
 .btn-highlight {
-<!--background-color: <?/*= get_field('site_highlight_color','option') */?> !important;
-border-color: <?/*= get_field('site_highlight_color','option') */?> !important;-->
+background-color: <?/*= get_field('site_highlight_color','option') */?> !important;
+border-color: <?/*= get_field('site_highlight_color','option') */?> !important;
 }
 
     .menu-toggle i {
@@ -337,4 +342,23 @@ background-color: <?= get_field('section_heading_bg','option') ?>;
 
 /* -------------------------------------------------------------------------- */
 
+
+<?php if( get_field( 'footer_bg_color', 'option' ) ) : ?>
+.footer_bg_color {
+    background-color: <?= get_field( 'footer_bg_color', 'option' ); ?>;
+}
+<?php endif; ?>
+
+<?php if( get_field( 'footer_link_color', 'option' ) ) : ?>
+.footer_link_color a {
+    color: <?= get_field( 'footer_link_color', 'option' ); ?> !important;
+}
+
+<?php endif; ?>
+
+<?php if( get_field( 'footer_text_color', 'option' ) ) : ?>
+.footer_text_color {
+    color: <?= get_field( 'footer_text_color', 'option' ); ?>;
+}
+<?php endif; ?>
 
