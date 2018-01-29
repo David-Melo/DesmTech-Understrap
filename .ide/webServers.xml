@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="193bab28-5b75-4fa3-b2b1-87f34bc3f713" name="Flywheel" url="http://sftp.flywheelsites.com">
+        <fileTransfer host="sftp.flywheelsites.com" port="22" rootFolder="/" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
