@@ -203,7 +203,7 @@ add_filter('wpcf7_form_elements', function( $content ) {
 
     foreach ( $spans as $span ) :
         $children = $span->firstChild;
-        //$span->parentNode->replaceChild( $children, $span );
+        $span->parentNode->replaceChild( $children, $span );
     endforeach;
 
     return $dom->saveHTML();

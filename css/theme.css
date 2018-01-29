@@ -8878,6 +8878,9 @@ section h2 {
 .btn-xl {
   font-size: 35px; }
 
+.modal-content {
+  color: #000 !important; }
+
 .mobile-debug {
   position: fixed;
   z-index: 99999999999999999999999999999;
@@ -8903,17 +8906,6 @@ section h2 {
   line-height: 38px;
   width: 52px;
   font-size: 28px; }
-
-@media (max-width: 760px) {
-  .header-section {
-    margin-top: 166px; }
-  .btn-xl {
-    font-size: 6vw; } }
-
-@media (max-width: 450px) {
-  .btn-lg, .btn-group-lg > .btn {
-    padding: 15px 20px;
-    font-size: 15px; } }
 
 /*
 * Use existing Bootstrap 4 classes and

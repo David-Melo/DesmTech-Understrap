@@ -19,8 +19,13 @@ body {
 }
 }
 .header-section {
-    margin-top: 100px;
+    margin-top: 166px;
 }
+
+.navbar-toggleable-lg {
+    top: 140px;
+}
+
 <?php endif; ?>
 
 <?php if( get_field('main_nav_background_shadow','option') ): ?>
