@@ -18,9 +18,11 @@ body {
     margin-top: 116px;
 }
 }
-.header-section {
+@media (max-width: 767px) {
+    .header-section {
     margin-top: 166px;
-}
+    }
+    }
 
 .navbar-toggleable-lg {
     top: 140px;
